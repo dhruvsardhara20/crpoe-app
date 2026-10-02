@@ -1,0 +1,601 @@
+Id,ProductId,UserId,ProfileName,HelpfulnessNumerator,HelpfulnessDenominator,Score,Time,Summary,Text
+0,B000000,U0,x,0,0,1,1790770841,Overpriced for such a small ba,<br />Overpriced for such a small bag of pretzels. Contact me@test.com or 0412 345 678
+1,B000001,U1,x,0,0,5,1790684441,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+2,B000002,U2,x,0,0,2,1790598041,"Way too sweet, artificial swee","<br />Way too sweet, artificial sweetener aftertaste is awful. Contact me@test.com or 0412 345 678"
+3,B000003,U3,x,0,0,5,1790511641,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+4,B000004,U4,x,0,0,1,1790425241,"Way too sweet, artificial swee","<br />Way too sweet, artificial sweetener aftertaste is awful. Contact me@test.com or 0412 345 678"
+5,B000005,U5,x,0,0,2,1790338841,Shipping was late and the box ,<br />Shipping was late and the box was damaged. Contact me@test.com or 0412 345 678
+6,B000006,U6,x,0,0,3,1790252441,"Popcorn is okay, nothing speci","<br />Popcorn is okay, nothing special. Contact me@test.com or 0412 345 678"
+7,B000007,U7,x,0,0,5,1790166041,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+8,B000008,U8,x,0,0,5,1790079641,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+9,B000009,U9,x,0,0,5,1789993241,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+10,B000010,U10,x,0,0,5,1789906841,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+11,B000011,U11,x,0,0,5,1789820441,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+12,B000012,U12,x,0,0,3,1789734041,Decent snack bar but the price,<br />Decent snack bar but the price is high for what you get. Contact me@test.com or 0412 345 678
+13,B000013,U13,x,0,0,5,1789647641,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+14,B000014,U14,x,0,0,5,1789561241,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+15,B000015,U15,x,0,0,3,1789474841,"Popcorn is okay, nothing speci","<br />Popcorn is okay, nothing special. Contact me@test.com or 0412 345 678"
+16,B000016,U16,x,0,0,1,1789388441,Overpriced for such a small ba,<br />Overpriced for such a small bag of pretzels. Contact me@test.com or 0412 345 678
+17,B000017,U17,x,0,0,1,1789302041,"Way too sweet, artificial swee","<br />Way too sweet, artificial sweetener aftertaste is awful. Contact me@test.com or 0412 345 678"
+18,B000018,U18,x,0,0,1,1789215641,The bag arrived crushed and th,<br />The bag arrived crushed and the chips were all broken. Contact me@test.com or 0412 345 678
+19,B000019,U19,x,0,0,3,1789129241,"Popcorn is okay, nothing speci","<br />Popcorn is okay, nothing special. Contact me@test.com or 0412 345 678"
+20,B000020,U20,x,0,0,5,1789042841,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+21,B000021,U21,x,0,0,1,1788956441,Overpriced for such a small ba,<br />Overpriced for such a small bag of pretzels. Contact me@test.com or 0412 345 678
+22,B000022,U22,x,0,0,5,1788870041,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+23,B000023,U23,x,0,0,3,1788783641,Decent snack bar but the price,<br />Decent snack bar but the price is high for what you get. Contact me@test.com or 0412 345 678
+24,B000024,U24,x,0,0,5,1788697241,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+25,B000025,U25,x,0,0,5,1788610841,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+26,B000026,U26,x,0,0,1,1788524441,Shipping was late and the box ,<br />Shipping was late and the box was damaged. Contact me@test.com or 0412 345 678
+27,B000027,U27,x,0,0,3,1788438041,Decent snack bar but the price,<br />Decent snack bar but the price is high for what you get. Contact me@test.com or 0412 345 678
+28,B000028,U28,x,0,0,5,1788351641,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+29,B000029,U29,x,0,0,1,1788265241,"Way too sweet, artificial swee","<br />Way too sweet, artificial sweetener aftertaste is awful. Contact me@test.com or 0412 345 678"
+30,B000030,U30,x,0,0,5,1788178841,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+31,B000031,U31,x,0,0,2,1788092441,The bag arrived crushed and th,<br />The bag arrived crushed and the chips were all broken. Contact me@test.com or 0412 345 678
+32,B000032,U32,x,0,0,1,1788006041,The bag arrived crushed and th,<br />The bag arrived crushed and the chips were all broken. Contact me@test.com or 0412 345 678
+33,B000033,U33,x,0,0,3,1787919641,"Popcorn is okay, nothing speci","<br />Popcorn is okay, nothing special. Contact me@test.com or 0412 345 678"
+34,B000034,U34,x,0,0,2,1787833241,Shipping was late and the box ,<br />Shipping was late and the box was damaged. Contact me@test.com or 0412 345 678
+35,B000035,U35,x,0,0,2,1787746841,Shipping was late and the box ,<br />Shipping was late and the box was damaged. Contact me@test.com or 0412 345 678
+36,B000036,U36,x,0,0,1,1787660441,"Cookies were stale and soggy, ","<br />Cookies were stale and soggy, very disappointed. Contact me@test.com or 0412 345 678"
+37,B000037,U37,x,0,0,3,1787574041,Decent snack bar but the price,<br />Decent snack bar but the price is high for what you get. Contact me@test.com or 0412 345 678
+38,B000038,U38,x,0,0,2,1787487641,Overpriced for such a small ba,<br />Overpriced for such a small bag of pretzels. Contact me@test.com or 0412 345 678
+39,B000039,U39,x,0,0,1,1787401241,"Way too sweet, artificial swee","<br />Way too sweet, artificial sweetener aftertaste is awful. Contact me@test.com or 0412 345 678"
+40,B000000,U40,x,0,0,5,1787314841,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+41,B000001,U41,x,0,0,1,1787228441,"Way too sweet, artificial swee","<br />Way too sweet, artificial sweetener aftertaste is awful. Contact me@test.com or 0412 345 678"
+42,B000002,U42,x,0,0,5,1787142041,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+43,B000003,U43,x,0,0,5,1787055641,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+44,B000004,U44,x,0,0,5,1786969241,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+45,B000005,U45,x,0,0,5,1786882841,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+46,B000006,U46,x,0,0,5,1786796441,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+47,B000007,U47,x,0,0,3,1786710041,"Popcorn is okay, nothing speci","<br />Popcorn is okay, nothing special. Contact me@test.com or 0412 345 678"
+48,B000008,U48,x,0,0,5,1786623641,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+49,B000009,U49,x,0,0,1,1786537241,Shipping was late and the box ,<br />Shipping was late and the box was damaged. Contact me@test.com or 0412 345 678
+50,B000010,U50,x,0,0,5,1786450841,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+51,B000011,U51,x,0,0,5,1786364441,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+52,B000012,U52,x,0,0,5,1786278041,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+53,B000013,U53,x,0,0,5,1786191641,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+54,B000014,U54,x,0,0,5,1786105241,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+55,B000015,U55,x,0,0,5,1786018841,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+56,B000016,U56,x,0,0,1,1785932441,Overpriced for such a small ba,<br />Overpriced for such a small bag of pretzels. Contact me@test.com or 0412 345 678
+57,B000017,U57,x,0,0,1,1785846041,The bag arrived crushed and th,<br />The bag arrived crushed and the chips were all broken. Contact me@test.com or 0412 345 678
+58,B000018,U58,x,0,0,1,1785759641,Shipping was late and the box ,<br />Shipping was late and the box was damaged. Contact me@test.com or 0412 345 678
+59,B000019,U59,x,0,0,1,1785673241,The bag arrived crushed and th,<br />The bag arrived crushed and the chips were all broken. Contact me@test.com or 0412 345 678
+60,B000020,U60,x,0,0,5,1785586841,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+61,B000021,U61,x,0,0,5,1785500441,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+62,B000022,U62,x,0,0,5,1785414041,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+63,B000023,U63,x,0,0,5,1785327641,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+64,B000024,U64,x,0,0,1,1785241241,Overpriced for such a small ba,<br />Overpriced for such a small bag of pretzels. Contact me@test.com or 0412 345 678
+65,B000025,U65,x,0,0,5,1785154841,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+66,B000026,U66,x,0,0,1,1785068441,Shipping was late and the box ,<br />Shipping was late and the box was damaged. Contact me@test.com or 0412 345 678
+67,B000027,U67,x,0,0,1,1784982041,"Cookies were stale and soggy, ","<br />Cookies were stale and soggy, very disappointed. Contact me@test.com or 0412 345 678"
+68,B000028,U68,x,0,0,1,1784895641,"Cookies were stale and soggy, ","<br />Cookies were stale and soggy, very disappointed. Contact me@test.com or 0412 345 678"
+69,B000029,U69,x,0,0,5,1784809241,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+70,B000030,U70,x,0,0,5,1784722841,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+71,B000031,U71,x,0,0,2,1784636441,The bag arrived crushed and th,<br />The bag arrived crushed and the chips were all broken. Contact me@test.com or 0412 345 678
+72,B000032,U72,x,0,0,2,1784550041,Shipping was late and the box ,<br />Shipping was late and the box was damaged. Contact me@test.com or 0412 345 678
+73,B000033,U73,x,0,0,2,1784463641,Overpriced for such a small ba,<br />Overpriced for such a small bag of pretzels. Contact me@test.com or 0412 345 678
+74,B000034,U74,x,0,0,5,1784377241,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+75,B000035,U75,x,0,0,5,1784290841,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+76,B000036,U76,x,0,0,5,1784204441,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+77,B000037,U77,x,0,0,5,1784118041,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+78,B000038,U78,x,0,0,5,1784031641,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+79,B000039,U79,x,0,0,5,1783945241,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+80,B000000,U80,x,0,0,1,1783858841,Shipping was late and the box ,<br />Shipping was late and the box was damaged. Contact me@test.com or 0412 345 678
+81,B000001,U81,x,0,0,2,1783772441,Overpriced for such a small ba,<br />Overpriced for such a small bag of pretzels. Contact me@test.com or 0412 345 678
+82,B000002,U82,x,0,0,1,1783686041,The bag arrived crushed and th,<br />The bag arrived crushed and the chips were all broken. Contact me@test.com or 0412 345 678
+83,B000003,U83,x,0,0,1,1783599641,"Way too sweet, artificial swee","<br />Way too sweet, artificial sweetener aftertaste is awful. Contact me@test.com or 0412 345 678"
+84,B000004,U84,x,0,0,5,1783513241,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+85,B000005,U85,x,0,0,5,1783426841,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+86,B000006,U86,x,0,0,3,1783340441,Decent snack bar but the price,<br />Decent snack bar but the price is high for what you get. Contact me@test.com or 0412 345 678
+87,B000007,U87,x,0,0,5,1783254041,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+88,B000008,U88,x,0,0,1,1783167641,The bag arrived crushed and th,<br />The bag arrived crushed and the chips were all broken. Contact me@test.com or 0412 345 678
+89,B000009,U89,x,0,0,5,1783081241,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+90,B000010,U90,x,0,0,2,1782994841,Overpriced for such a small ba,<br />Overpriced for such a small bag of pretzels. Contact me@test.com or 0412 345 678
+91,B000011,U91,x,0,0,3,1782908441,"Popcorn is okay, nothing speci","<br />Popcorn is okay, nothing special. Contact me@test.com or 0412 345 678"
+92,B000012,U92,x,0,0,3,1782822041,Decent snack bar but the price,<br />Decent snack bar but the price is high for what you get. Contact me@test.com or 0412 345 678
+93,B000013,U93,x,0,0,5,1782735641,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+94,B000014,U94,x,0,0,5,1782649241,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+95,B000015,U95,x,0,0,5,1782562841,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+96,B000016,U96,x,0,0,3,1782476441,"Popcorn is okay, nothing speci","<br />Popcorn is okay, nothing special. Contact me@test.com or 0412 345 678"
+97,B000017,U97,x,0,0,3,1782390041,Decent snack bar but the price,<br />Decent snack bar but the price is high for what you get. Contact me@test.com or 0412 345 678
+98,B000018,U98,x,0,0,3,1782303641,Decent snack bar but the price,<br />Decent snack bar but the price is high for what you get. Contact me@test.com or 0412 345 678
+99,B000019,U99,x,0,0,5,1782217241,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+100,B000020,U100,x,0,0,5,1782130841,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+101,B000021,U101,x,0,0,3,1782044441,"Popcorn is okay, nothing speci","<br />Popcorn is okay, nothing special. Contact me@test.com or 0412 345 678"
+102,B000022,U102,x,0,0,5,1781958041,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+103,B000023,U103,x,0,0,2,1781871641,"Way too sweet, artificial swee","<br />Way too sweet, artificial sweetener aftertaste is awful. Contact me@test.com or 0412 345 678"
+104,B000024,U104,x,0,0,1,1781785241,"Cookies were stale and soggy, ","<br />Cookies were stale and soggy, very disappointed. Contact me@test.com or 0412 345 678"
+105,B000025,U105,x,0,0,1,1781698841,Overpriced for such a small ba,<br />Overpriced for such a small bag of pretzels. Contact me@test.com or 0412 345 678
+106,B000026,U106,x,0,0,5,1781612441,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+107,B000027,U107,x,0,0,2,1781526041,The bag arrived crushed and th,<br />The bag arrived crushed and the chips were all broken. Contact me@test.com or 0412 345 678
+108,B000028,U108,x,0,0,5,1781439641,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+109,B000029,U109,x,0,0,1,1781353241,"Way too sweet, artificial swee","<br />Way too sweet, artificial sweetener aftertaste is awful. Contact me@test.com or 0412 345 678"
+110,B000030,U110,x,0,0,3,1781266841,Decent snack bar but the price,<br />Decent snack bar but the price is high for what you get. Contact me@test.com or 0412 345 678
+111,B000031,U111,x,0,0,3,1781180441,"Popcorn is okay, nothing speci","<br />Popcorn is okay, nothing special. Contact me@test.com or 0412 345 678"
+112,B000032,U112,x,0,0,5,1781094041,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+113,B000033,U113,x,0,0,5,1781007641,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+114,B000034,U114,x,0,0,3,1780921241,"Popcorn is okay, nothing speci","<br />Popcorn is okay, nothing special. Contact me@test.com or 0412 345 678"
+115,B000035,U115,x,0,0,2,1780834841,Shipping was late and the box ,<br />Shipping was late and the box was damaged. Contact me@test.com or 0412 345 678
+116,B000036,U116,x,0,0,2,1780748441,Overpriced for such a small ba,<br />Overpriced for such a small bag of pretzels. Contact me@test.com or 0412 345 678
+117,B000037,U117,x,0,0,5,1780662041,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+118,B000038,U118,x,0,0,5,1780575641,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+119,B000039,U119,x,0,0,1,1780489241,The bag arrived crushed and th,<br />The bag arrived crushed and the chips were all broken. Contact me@test.com or 0412 345 678
+120,B000000,U120,x,0,0,5,1780402841,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+121,B000001,U121,x,0,0,5,1780316441,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+122,B000002,U122,x,0,0,1,1780230041,"Way too sweet, artificial swee","<br />Way too sweet, artificial sweetener aftertaste is awful. Contact me@test.com or 0412 345 678"
+123,B000003,U123,x,0,0,5,1780143641,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+124,B000004,U124,x,0,0,5,1780057241,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+125,B000005,U125,x,0,0,5,1779970841,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+126,B000006,U126,x,0,0,3,1779884441,"Popcorn is okay, nothing speci","<br />Popcorn is okay, nothing special. Contact me@test.com or 0412 345 678"
+127,B000007,U127,x,0,0,5,1779798041,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+128,B000008,U128,x,0,0,2,1779711641,The bag arrived crushed and th,<br />The bag arrived crushed and the chips were all broken. Contact me@test.com or 0412 345 678
+129,B000009,U129,x,0,0,5,1779625241,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+130,B000010,U130,x,0,0,2,1779538841,"Way too sweet, artificial swee","<br />Way too sweet, artificial sweetener aftertaste is awful. Contact me@test.com or 0412 345 678"
+131,B000011,U131,x,0,0,2,1779452441,"Way too sweet, artificial swee","<br />Way too sweet, artificial sweetener aftertaste is awful. Contact me@test.com or 0412 345 678"
+132,B000012,U132,x,0,0,5,1779366041,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+133,B000013,U133,x,0,0,3,1779279641,Decent snack bar but the price,<br />Decent snack bar but the price is high for what you get. Contact me@test.com or 0412 345 678
+134,B000014,U134,x,0,0,5,1779193241,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+135,B000015,U135,x,0,0,5,1779106841,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+136,B000016,U136,x,0,0,1,1779020441,Overpriced for such a small ba,<br />Overpriced for such a small bag of pretzels. Contact me@test.com or 0412 345 678
+137,B000017,U137,x,0,0,5,1778934041,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+138,B000018,U138,x,0,0,1,1778847641,"Cookies were stale and soggy, ","<br />Cookies were stale and soggy, very disappointed. Contact me@test.com or 0412 345 678"
+139,B000019,U139,x,0,0,1,1778761241,Overpriced for such a small ba,<br />Overpriced for such a small bag of pretzels. Contact me@test.com or 0412 345 678
+140,B000020,U140,x,0,0,5,1778674841,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+141,B000021,U141,x,0,0,5,1778588441,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+142,B000022,U142,x,0,0,5,1778502041,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+143,B000023,U143,x,0,0,5,1778415641,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+144,B000024,U144,x,0,0,2,1778329241,Overpriced for such a small ba,<br />Overpriced for such a small bag of pretzels. Contact me@test.com or 0412 345 678
+145,B000025,U145,x,0,0,2,1778242841,"Cookies were stale and soggy, ","<br />Cookies were stale and soggy, very disappointed. Contact me@test.com or 0412 345 678"
+146,B000026,U146,x,0,0,5,1778156441,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+147,B000027,U147,x,0,0,3,1778070041,Decent snack bar but the price,<br />Decent snack bar but the price is high for what you get. Contact me@test.com or 0412 345 678
+148,B000028,U148,x,0,0,2,1777983641,"Cookies were stale and soggy, ","<br />Cookies were stale and soggy, very disappointed. Contact me@test.com or 0412 345 678"
+149,B000029,U149,x,0,0,5,1777897241,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+150,B000030,U150,x,0,0,5,1777810841,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+151,B000031,U151,x,0,0,5,1777724441,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+152,B000032,U152,x,0,0,1,1777638041,"Cookies were stale and soggy, ","<br />Cookies were stale and soggy, very disappointed. Contact me@test.com or 0412 345 678"
+153,B000033,U153,x,0,0,1,1777551641,"Way too sweet, artificial swee","<br />Way too sweet, artificial sweetener aftertaste is awful. Contact me@test.com or 0412 345 678"
+154,B000034,U154,x,0,0,1,1777465241,"Cookies were stale and soggy, ","<br />Cookies were stale and soggy, very disappointed. Contact me@test.com or 0412 345 678"
+155,B000035,U155,x,0,0,5,1777378841,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+156,B000036,U156,x,0,0,5,1777292441,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+157,B000037,U157,x,0,0,2,1777206041,The bag arrived crushed and th,<br />The bag arrived crushed and the chips were all broken. Contact me@test.com or 0412 345 678
+158,B000038,U158,x,0,0,5,1777119641,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+159,B000039,U159,x,0,0,2,1777033241,Overpriced for such a small ba,<br />Overpriced for such a small bag of pretzels. Contact me@test.com or 0412 345 678
+160,B000000,U160,x,0,0,2,1776946841,"Way too sweet, artificial swee","<br />Way too sweet, artificial sweetener aftertaste is awful. Contact me@test.com or 0412 345 678"
+161,B000001,U161,x,0,0,3,1776860441,"Popcorn is okay, nothing speci","<br />Popcorn is okay, nothing special. Contact me@test.com or 0412 345 678"
+162,B000002,U162,x,0,0,1,1776774041,"Cookies were stale and soggy, ","<br />Cookies were stale and soggy, very disappointed. Contact me@test.com or 0412 345 678"
+163,B000003,U163,x,0,0,5,1776687641,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+164,B000004,U164,x,0,0,3,1776601241,Decent snack bar but the price,<br />Decent snack bar but the price is high for what you get. Contact me@test.com or 0412 345 678
+165,B000005,U165,x,0,0,5,1776514841,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+166,B000006,U166,x,0,0,3,1776428441,"Popcorn is okay, nothing speci","<br />Popcorn is okay, nothing special. Contact me@test.com or 0412 345 678"
+167,B000007,U167,x,0,0,2,1776342041,Shipping was late and the box ,<br />Shipping was late and the box was damaged. Contact me@test.com or 0412 345 678
+168,B000008,U168,x,0,0,1,1776255641,Overpriced for such a small ba,<br />Overpriced for such a small bag of pretzels. Contact me@test.com or 0412 345 678
+169,B000009,U169,x,0,0,1,1776169241,Shipping was late and the box ,<br />Shipping was late and the box was damaged. Contact me@test.com or 0412 345 678
+170,B000010,U170,x,0,0,5,1776082841,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+171,B000011,U171,x,0,0,5,1775996441,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+172,B000012,U172,x,0,0,2,1775910041,Overpriced for such a small ba,<br />Overpriced for such a small bag of pretzels. Contact me@test.com or 0412 345 678
+173,B000013,U173,x,0,0,3,1775823641,"Popcorn is okay, nothing speci","<br />Popcorn is okay, nothing special. Contact me@test.com or 0412 345 678"
+174,B000014,U174,x,0,0,3,1775737241,Decent snack bar but the price,<br />Decent snack bar but the price is high for what you get. Contact me@test.com or 0412 345 678
+175,B000015,U175,x,0,0,3,1775650841,Decent snack bar but the price,<br />Decent snack bar but the price is high for what you get. Contact me@test.com or 0412 345 678
+176,B000016,U176,x,0,0,3,1775564441,"Popcorn is okay, nothing speci","<br />Popcorn is okay, nothing special. Contact me@test.com or 0412 345 678"
+177,B000017,U177,x,0,0,1,1775478041,Shipping was late and the box ,<br />Shipping was late and the box was damaged. Contact me@test.com or 0412 345 678
+178,B000018,U178,x,0,0,2,1775391641,"Cookies were stale and soggy, ","<br />Cookies were stale and soggy, very disappointed. Contact me@test.com or 0412 345 678"
+179,B000019,U179,x,0,0,2,1775305241,Shipping was late and the box ,<br />Shipping was late and the box was damaged. Contact me@test.com or 0412 345 678
+180,B000020,U180,x,0,0,2,1775218841,Overpriced for such a small ba,<br />Overpriced for such a small bag of pretzels. Contact me@test.com or 0412 345 678
+181,B000021,U181,x,0,0,1,1775132441,"Cookies were stale and soggy, ","<br />Cookies were stale and soggy, very disappointed. Contact me@test.com or 0412 345 678"
+182,B000022,U182,x,0,0,1,1775046041,The bag arrived crushed and th,<br />The bag arrived crushed and the chips were all broken. Contact me@test.com or 0412 345 678
+183,B000023,U183,x,0,0,5,1774959641,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+184,B000024,U184,x,0,0,5,1774873241,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+185,B000025,U185,x,0,0,2,1774786841,"Way too sweet, artificial swee","<br />Way too sweet, artificial sweetener aftertaste is awful. Contact me@test.com or 0412 345 678"
+186,B000026,U186,x,0,0,2,1774700441,Overpriced for such a small ba,<br />Overpriced for such a small bag of pretzels. Contact me@test.com or 0412 345 678
+187,B000027,U187,x,0,0,5,1774614041,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+188,B000028,U188,x,0,0,3,1774527641,"Popcorn is okay, nothing speci","<br />Popcorn is okay, nothing special. Contact me@test.com or 0412 345 678"
+189,B000029,U189,x,0,0,5,1774441241,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+190,B000030,U190,x,0,0,5,1774354841,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+191,B000031,U191,x,0,0,2,1774268441,"Cookies were stale and soggy, ","<br />Cookies were stale and soggy, very disappointed. Contact me@test.com or 0412 345 678"
+192,B000032,U192,x,0,0,3,1774182041,"Popcorn is okay, nothing speci","<br />Popcorn is okay, nothing special. Contact me@test.com or 0412 345 678"
+193,B000033,U193,x,0,0,2,1774095641,"Cookies were stale and soggy, ","<br />Cookies were stale and soggy, very disappointed. Contact me@test.com or 0412 345 678"
+194,B000034,U194,x,0,0,5,1774009241,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+195,B000035,U195,x,0,0,1,1773922841,Overpriced for such a small ba,<br />Overpriced for such a small bag of pretzels. Contact me@test.com or 0412 345 678
+196,B000036,U196,x,0,0,5,1773836441,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+197,B000037,U197,x,0,0,5,1773750041,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+198,B000038,U198,x,0,0,1,1773663641,"Way too sweet, artificial swee","<br />Way too sweet, artificial sweetener aftertaste is awful. Contact me@test.com or 0412 345 678"
+199,B000039,U199,x,0,0,1,1773577241,"Way too sweet, artificial swee","<br />Way too sweet, artificial sweetener aftertaste is awful. Contact me@test.com or 0412 345 678"
+200,B000000,U200,x,0,0,5,1773490841,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+201,B000001,U201,x,0,0,5,1773404441,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+202,B000002,U202,x,0,0,2,1773318041,Overpriced for such a small ba,<br />Overpriced for such a small bag of pretzels. Contact me@test.com or 0412 345 678
+203,B000003,U203,x,0,0,2,1773231641,Shipping was late and the box ,<br />Shipping was late and the box was damaged. Contact me@test.com or 0412 345 678
+204,B000004,U204,x,0,0,2,1773145241,"Cookies were stale and soggy, ","<br />Cookies were stale and soggy, very disappointed. Contact me@test.com or 0412 345 678"
+205,B000005,U205,x,0,0,1,1773058841,The bag arrived crushed and th,<br />The bag arrived crushed and the chips were all broken. Contact me@test.com or 0412 345 678
+206,B000006,U206,x,0,0,5,1772972441,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+207,B000007,U207,x,0,0,5,1772886041,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+208,B000008,U208,x,0,0,1,1772799641,The bag arrived crushed and th,<br />The bag arrived crushed and the chips were all broken. Contact me@test.com or 0412 345 678
+209,B000009,U209,x,0,0,3,1772713241,"Popcorn is okay, nothing speci","<br />Popcorn is okay, nothing special. Contact me@test.com or 0412 345 678"
+210,B000010,U210,x,0,0,1,1772626841,The bag arrived crushed and th,<br />The bag arrived crushed and the chips were all broken. Contact me@test.com or 0412 345 678
+211,B000011,U211,x,0,0,5,1772540441,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+212,B000012,U212,x,0,0,2,1772454041,Shipping was late and the box ,<br />Shipping was late and the box was damaged. Contact me@test.com or 0412 345 678
+213,B000013,U213,x,0,0,1,1772367641,The bag arrived crushed and th,<br />The bag arrived crushed and the chips were all broken. Contact me@test.com or 0412 345 678
+214,B000014,U214,x,0,0,5,1772281241,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+215,B000015,U215,x,0,0,5,1772194841,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+216,B000016,U216,x,0,0,3,1772108441,Decent snack bar but the price,<br />Decent snack bar but the price is high for what you get. Contact me@test.com or 0412 345 678
+217,B000017,U217,x,0,0,5,1772022041,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+218,B000018,U218,x,0,0,2,1771935641,The bag arrived crushed and th,<br />The bag arrived crushed and the chips were all broken. Contact me@test.com or 0412 345 678
+219,B000019,U219,x,0,0,5,1771849241,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+220,B000020,U220,x,0,0,5,1771762841,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+221,B000021,U221,x,0,0,2,1771676441,The bag arrived crushed and th,<br />The bag arrived crushed and the chips were all broken. Contact me@test.com or 0412 345 678
+222,B000022,U222,x,0,0,5,1771590041,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+223,B000023,U223,x,0,0,2,1771503641,"Way too sweet, artificial swee","<br />Way too sweet, artificial sweetener aftertaste is awful. Contact me@test.com or 0412 345 678"
+224,B000024,U224,x,0,0,5,1771417241,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+225,B000025,U225,x,0,0,1,1771330841,The bag arrived crushed and th,<br />The bag arrived crushed and the chips were all broken. Contact me@test.com or 0412 345 678
+226,B000026,U226,x,0,0,5,1771244441,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+227,B000027,U227,x,0,0,1,1771158041,The bag arrived crushed and th,<br />The bag arrived crushed and the chips were all broken. Contact me@test.com or 0412 345 678
+228,B000028,U228,x,0,0,5,1771071641,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+229,B000029,U229,x,0,0,5,1770985241,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+230,B000030,U230,x,0,0,5,1770898841,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+231,B000031,U231,x,0,0,5,1770812441,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+232,B000032,U232,x,0,0,1,1770726041,"Way too sweet, artificial swee","<br />Way too sweet, artificial sweetener aftertaste is awful. Contact me@test.com or 0412 345 678"
+233,B000033,U233,x,0,0,5,1770639641,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+234,B000034,U234,x,0,0,5,1770553241,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+235,B000035,U235,x,0,0,3,1770466841,Decent snack bar but the price,<br />Decent snack bar but the price is high for what you get. Contact me@test.com or 0412 345 678
+236,B000036,U236,x,0,0,3,1770380441,Decent snack bar but the price,<br />Decent snack bar but the price is high for what you get. Contact me@test.com or 0412 345 678
+237,B000037,U237,x,0,0,5,1770294041,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+238,B000038,U238,x,0,0,5,1770207641,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+239,B000039,U239,x,0,0,5,1770121241,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+240,B000000,U240,x,0,0,3,1770034841,"Popcorn is okay, nothing speci","<br />Popcorn is okay, nothing special. Contact me@test.com or 0412 345 678"
+241,B000001,U241,x,0,0,1,1769948441,"Way too sweet, artificial swee","<br />Way too sweet, artificial sweetener aftertaste is awful. Contact me@test.com or 0412 345 678"
+242,B000002,U242,x,0,0,5,1769862041,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+243,B000003,U243,x,0,0,5,1769775641,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+244,B000004,U244,x,0,0,1,1769689241,"Cookies were stale and soggy, ","<br />Cookies were stale and soggy, very disappointed. Contact me@test.com or 0412 345 678"
+245,B000005,U245,x,0,0,5,1769602841,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+246,B000006,U246,x,0,0,5,1769516441,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+247,B000007,U247,x,0,0,5,1769430041,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+248,B000008,U248,x,0,0,2,1769343641,"Cookies were stale and soggy, ","<br />Cookies were stale and soggy, very disappointed. Contact me@test.com or 0412 345 678"
+249,B000009,U249,x,0,0,5,1769257241,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+250,B000010,U250,x,0,0,5,1769170841,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+251,B000011,U251,x,0,0,1,1769084441,Shipping was late and the box ,<br />Shipping was late and the box was damaged. Contact me@test.com or 0412 345 678
+252,B000012,U252,x,0,0,5,1768998041,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+253,B000013,U253,x,0,0,5,1768911641,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+254,B000014,U254,x,0,0,3,1768825241,Decent snack bar but the price,<br />Decent snack bar but the price is high for what you get. Contact me@test.com or 0412 345 678
+255,B000015,U255,x,0,0,5,1768738841,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+256,B000016,U256,x,0,0,3,1768652441,"Popcorn is okay, nothing speci","<br />Popcorn is okay, nothing special. Contact me@test.com or 0412 345 678"
+257,B000017,U257,x,0,0,3,1768566041,"Popcorn is okay, nothing speci","<br />Popcorn is okay, nothing special. Contact me@test.com or 0412 345 678"
+258,B000018,U258,x,0,0,5,1768479641,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+259,B000019,U259,x,0,0,2,1768393241,"Cookies were stale and soggy, ","<br />Cookies were stale and soggy, very disappointed. Contact me@test.com or 0412 345 678"
+260,B000020,U260,x,0,0,3,1768306841,"Popcorn is okay, nothing speci","<br />Popcorn is okay, nothing special. Contact me@test.com or 0412 345 678"
+261,B000021,U261,x,0,0,1,1768220441,Overpriced for such a small ba,<br />Overpriced for such a small bag of pretzels. Contact me@test.com or 0412 345 678
+262,B000022,U262,x,0,0,5,1768134041,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+263,B000023,U263,x,0,0,5,1768047641,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+264,B000024,U264,x,0,0,5,1767961241,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+265,B000025,U265,x,0,0,2,1767874841,The bag arrived crushed and th,<br />The bag arrived crushed and the chips were all broken. Contact me@test.com or 0412 345 678
+266,B000026,U266,x,0,0,1,1767788441,"Way too sweet, artificial swee","<br />Way too sweet, artificial sweetener aftertaste is awful. Contact me@test.com or 0412 345 678"
+267,B000027,U267,x,0,0,2,1767702041,Overpriced for such a small ba,<br />Overpriced for such a small bag of pretzels. Contact me@test.com or 0412 345 678
+268,B000028,U268,x,0,0,5,1767615641,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+269,B000029,U269,x,0,0,5,1767529241,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+270,B000030,U270,x,0,0,5,1767442841,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+271,B000031,U271,x,0,0,5,1767356441,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+272,B000032,U272,x,0,0,2,1767270041,The bag arrived crushed and th,<br />The bag arrived crushed and the chips were all broken. Contact me@test.com or 0412 345 678
+273,B000033,U273,x,0,0,2,1767183641,"Cookies were stale and soggy, ","<br />Cookies were stale and soggy, very disappointed. Contact me@test.com or 0412 345 678"
+274,B000034,U274,x,0,0,5,1767097241,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+275,B000035,U275,x,0,0,5,1767010841,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+276,B000036,U276,x,0,0,5,1766924441,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+277,B000037,U277,x,0,0,5,1766838041,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+278,B000038,U278,x,0,0,1,1766751641,Overpriced for such a small ba,<br />Overpriced for such a small bag of pretzels. Contact me@test.com or 0412 345 678
+279,B000039,U279,x,0,0,2,1766665241,"Way too sweet, artificial swee","<br />Way too sweet, artificial sweetener aftertaste is awful. Contact me@test.com or 0412 345 678"
+280,B000000,U280,x,0,0,3,1766578841,"Popcorn is okay, nothing speci","<br />Popcorn is okay, nothing special. Contact me@test.com or 0412 345 678"
+281,B000001,U281,x,0,0,1,1766492441,The bag arrived crushed and th,<br />The bag arrived crushed and the chips were all broken. Contact me@test.com or 0412 345 678
+282,B000002,U282,x,0,0,2,1766406041,"Way too sweet, artificial swee","<br />Way too sweet, artificial sweetener aftertaste is awful. Contact me@test.com or 0412 345 678"
+283,B000003,U283,x,0,0,5,1766319641,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+284,B000004,U284,x,0,0,3,1766233241,"Popcorn is okay, nothing speci","<br />Popcorn is okay, nothing special. Contact me@test.com or 0412 345 678"
+285,B000005,U285,x,0,0,5,1766146841,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+286,B000006,U286,x,0,0,5,1766060441,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+287,B000007,U287,x,0,0,1,1765974041,"Cookies were stale and soggy, ","<br />Cookies were stale and soggy, very disappointed. Contact me@test.com or 0412 345 678"
+288,B000008,U288,x,0,0,5,1765887641,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+289,B000009,U289,x,0,0,2,1765801241,"Way too sweet, artificial swee","<br />Way too sweet, artificial sweetener aftertaste is awful. Contact me@test.com or 0412 345 678"
+290,B000010,U290,x,0,0,5,1765714841,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+291,B000011,U291,x,0,0,1,1765628441,"Cookies were stale and soggy, ","<br />Cookies were stale and soggy, very disappointed. Contact me@test.com or 0412 345 678"
+292,B000012,U292,x,0,0,2,1765542041,Overpriced for such a small ba,<br />Overpriced for such a small bag of pretzels. Contact me@test.com or 0412 345 678
+293,B000013,U293,x,0,0,2,1765455641,"Cookies were stale and soggy, ","<br />Cookies were stale and soggy, very disappointed. Contact me@test.com or 0412 345 678"
+294,B000014,U294,x,0,0,5,1765369241,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+295,B000015,U295,x,0,0,2,1765282841,"Cookies were stale and soggy, ","<br />Cookies were stale and soggy, very disappointed. Contact me@test.com or 0412 345 678"
+296,B000016,U296,x,0,0,2,1765196441,Shipping was late and the box ,<br />Shipping was late and the box was damaged. Contact me@test.com or 0412 345 678
+297,B000017,U297,x,0,0,2,1765110041,The bag arrived crushed and th,<br />The bag arrived crushed and the chips were all broken. Contact me@test.com or 0412 345 678
+298,B000018,U298,x,0,0,5,1765023641,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+299,B000019,U299,x,0,0,1,1764937241,Shipping was late and the box ,<br />Shipping was late and the box was damaged. Contact me@test.com or 0412 345 678
+300,B000020,U300,x,0,0,5,1764850841,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+301,B000021,U301,x,0,0,5,1764764441,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+302,B000022,U302,x,0,0,1,1764678041,The bag arrived crushed and th,<br />The bag arrived crushed and the chips were all broken. Contact me@test.com or 0412 345 678
+303,B000023,U303,x,0,0,1,1764591641,Overpriced for such a small ba,<br />Overpriced for such a small bag of pretzels. Contact me@test.com or 0412 345 678
+304,B000024,U304,x,0,0,5,1764505241,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+305,B000025,U305,x,0,0,2,1764418841,"Way too sweet, artificial swee","<br />Way too sweet, artificial sweetener aftertaste is awful. Contact me@test.com or 0412 345 678"
+306,B000026,U306,x,0,0,1,1764332441,"Cookies were stale and soggy, ","<br />Cookies were stale and soggy, very disappointed. Contact me@test.com or 0412 345 678"
+307,B000027,U307,x,0,0,1,1764246041,"Way too sweet, artificial swee","<br />Way too sweet, artificial sweetener aftertaste is awful. Contact me@test.com or 0412 345 678"
+308,B000028,U308,x,0,0,5,1764159641,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+309,B000029,U309,x,0,0,1,1764073241,Overpriced for such a small ba,<br />Overpriced for such a small bag of pretzels. Contact me@test.com or 0412 345 678
+310,B000030,U310,x,0,0,5,1763986841,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+311,B000031,U311,x,0,0,3,1763900441,Decent snack bar but the price,<br />Decent snack bar but the price is high for what you get. Contact me@test.com or 0412 345 678
+312,B000032,U312,x,0,0,5,1763814041,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+313,B000033,U313,x,0,0,5,1763727641,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+314,B000034,U314,x,0,0,5,1763641241,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+315,B000035,U315,x,0,0,5,1763554841,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+316,B000036,U316,x,0,0,5,1763468441,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+317,B000037,U317,x,0,0,5,1763382041,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+318,B000038,U318,x,0,0,1,1763295641,Overpriced for such a small ba,<br />Overpriced for such a small bag of pretzels. Contact me@test.com or 0412 345 678
+319,B000039,U319,x,0,0,2,1763209241,The bag arrived crushed and th,<br />The bag arrived crushed and the chips were all broken. Contact me@test.com or 0412 345 678
+320,B000000,U320,x,0,0,5,1763122841,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+321,B000001,U321,x,0,0,5,1763036441,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+322,B000002,U322,x,0,0,5,1762950041,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+323,B000003,U323,x,0,0,1,1762863641,"Cookies were stale and soggy, ","<br />Cookies were stale and soggy, very disappointed. Contact me@test.com or 0412 345 678"
+324,B000004,U324,x,0,0,1,1762777241,Shipping was late and the box ,<br />Shipping was late and the box was damaged. Contact me@test.com or 0412 345 678
+325,B000005,U325,x,0,0,2,1762690841,Shipping was late and the box ,<br />Shipping was late and the box was damaged. Contact me@test.com or 0412 345 678
+326,B000006,U326,x,0,0,2,1762604441,"Way too sweet, artificial swee","<br />Way too sweet, artificial sweetener aftertaste is awful. Contact me@test.com or 0412 345 678"
+327,B000007,U327,x,0,0,2,1762518041,Shipping was late and the box ,<br />Shipping was late and the box was damaged. Contact me@test.com or 0412 345 678
+328,B000008,U328,x,0,0,2,1762431641,Overpriced for such a small ba,<br />Overpriced for such a small bag of pretzels. Contact me@test.com or 0412 345 678
+329,B000009,U329,x,0,0,2,1762345241,"Cookies were stale and soggy, ","<br />Cookies were stale and soggy, very disappointed. Contact me@test.com or 0412 345 678"
+330,B000010,U330,x,0,0,5,1762258841,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+331,B000011,U331,x,0,0,5,1762172441,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+332,B000012,U332,x,0,0,5,1762086041,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+333,B000013,U333,x,0,0,5,1761999641,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+334,B000014,U334,x,0,0,2,1761913241,"Cookies were stale and soggy, ","<br />Cookies were stale and soggy, very disappointed. Contact me@test.com or 0412 345 678"
+335,B000015,U335,x,0,0,2,1761826841,"Cookies were stale and soggy, ","<br />Cookies were stale and soggy, very disappointed. Contact me@test.com or 0412 345 678"
+336,B000016,U336,x,0,0,5,1761740441,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+337,B000017,U337,x,0,0,5,1761654041,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+338,B000018,U338,x,0,0,2,1761567641,"Way too sweet, artificial swee","<br />Way too sweet, artificial sweetener aftertaste is awful. Contact me@test.com or 0412 345 678"
+339,B000019,U339,x,0,0,3,1761481241,Decent snack bar but the price,<br />Decent snack bar but the price is high for what you get. Contact me@test.com or 0412 345 678
+340,B000020,U340,x,0,0,5,1761394841,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+341,B000021,U341,x,0,0,5,1761308441,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+342,B000022,U342,x,0,0,5,1761222041,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+343,B000023,U343,x,0,0,5,1761135641,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+344,B000024,U344,x,0,0,5,1761049241,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+345,B000025,U345,x,0,0,2,1760962841,"Way too sweet, artificial swee","<br />Way too sweet, artificial sweetener aftertaste is awful. Contact me@test.com or 0412 345 678"
+346,B000026,U346,x,0,0,5,1760876441,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+347,B000027,U347,x,0,0,3,1760790041,"Popcorn is okay, nothing speci","<br />Popcorn is okay, nothing special. Contact me@test.com or 0412 345 678"
+348,B000028,U348,x,0,0,5,1760703641,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+349,B000029,U349,x,0,0,5,1760617241,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+350,B000030,U350,x,0,0,1,1760530841,Overpriced for such a small ba,<br />Overpriced for such a small bag of pretzels. Contact me@test.com or 0412 345 678
+351,B000031,U351,x,0,0,3,1760444441,Decent snack bar but the price,<br />Decent snack bar but the price is high for what you get. Contact me@test.com or 0412 345 678
+352,B000032,U352,x,0,0,3,1760358041,Decent snack bar but the price,<br />Decent snack bar but the price is high for what you get. Contact me@test.com or 0412 345 678
+353,B000033,U353,x,0,0,5,1760271641,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+354,B000034,U354,x,0,0,5,1760185241,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+355,B000035,U355,x,0,0,2,1760098841,"Cookies were stale and soggy, ","<br />Cookies were stale and soggy, very disappointed. Contact me@test.com or 0412 345 678"
+356,B000036,U356,x,0,0,3,1760012441,"Popcorn is okay, nothing speci","<br />Popcorn is okay, nothing special. Contact me@test.com or 0412 345 678"
+357,B000037,U357,x,0,0,5,1759926041,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+358,B000038,U358,x,0,0,2,1759839641,Shipping was late and the box ,<br />Shipping was late and the box was damaged. Contact me@test.com or 0412 345 678
+359,B000039,U359,x,0,0,5,1759753241,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+360,B000000,U360,x,0,0,5,1759666841,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+361,B000001,U361,x,0,0,5,1759580441,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+362,B000002,U362,x,0,0,3,1759494041,Decent snack bar but the price,<br />Decent snack bar but the price is high for what you get. Contact me@test.com or 0412 345 678
+363,B000003,U363,x,0,0,3,1759407641,"Popcorn is okay, nothing speci","<br />Popcorn is okay, nothing special. Contact me@test.com or 0412 345 678"
+364,B000004,U364,x,0,0,1,1759321241,"Way too sweet, artificial swee","<br />Way too sweet, artificial sweetener aftertaste is awful. Contact me@test.com or 0412 345 678"
+365,B000005,U365,x,0,0,2,1759234841,Overpriced for such a small ba,<br />Overpriced for such a small bag of pretzels. Contact me@test.com or 0412 345 678
+366,B000006,U366,x,0,0,2,1759148441,"Way too sweet, artificial swee","<br />Way too sweet, artificial sweetener aftertaste is awful. Contact me@test.com or 0412 345 678"
+367,B000007,U367,x,0,0,5,1759062041,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+368,B000008,U368,x,0,0,1,1758975641,The bag arrived crushed and th,<br />The bag arrived crushed and the chips were all broken. Contact me@test.com or 0412 345 678
+369,B000009,U369,x,0,0,1,1758889241,"Cookies were stale and soggy, ","<br />Cookies were stale and soggy, very disappointed. Contact me@test.com or 0412 345 678"
+370,B000010,U370,x,0,0,5,1758802841,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+371,B000011,U371,x,0,0,3,1758716441,"Popcorn is okay, nothing speci","<br />Popcorn is okay, nothing special. Contact me@test.com or 0412 345 678"
+372,B000012,U372,x,0,0,2,1758630041,Shipping was late and the box ,<br />Shipping was late and the box was damaged. Contact me@test.com or 0412 345 678
+373,B000013,U373,x,0,0,3,1758543641,"Popcorn is okay, nothing speci","<br />Popcorn is okay, nothing special. Contact me@test.com or 0412 345 678"
+374,B000014,U374,x,0,0,5,1758457241,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+375,B000015,U375,x,0,0,5,1758370841,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+376,B000016,U376,x,0,0,2,1758284441,"Cookies were stale and soggy, ","<br />Cookies were stale and soggy, very disappointed. Contact me@test.com or 0412 345 678"
+377,B000017,U377,x,0,0,5,1758198041,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+378,B000018,U378,x,0,0,5,1758111641,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+379,B000019,U379,x,0,0,2,1758025241,"Cookies were stale and soggy, ","<br />Cookies were stale and soggy, very disappointed. Contact me@test.com or 0412 345 678"
+380,B000020,U380,x,0,0,1,1757938841,"Way too sweet, artificial swee","<br />Way too sweet, artificial sweetener aftertaste is awful. Contact me@test.com or 0412 345 678"
+381,B000021,U381,x,0,0,5,1757852441,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+382,B000022,U382,x,0,0,2,1757766041,"Way too sweet, artificial swee","<br />Way too sweet, artificial sweetener aftertaste is awful. Contact me@test.com or 0412 345 678"
+383,B000023,U383,x,0,0,1,1757679641,The bag arrived crushed and th,<br />The bag arrived crushed and the chips were all broken. Contact me@test.com or 0412 345 678
+384,B000024,U384,x,0,0,3,1757593241,"Popcorn is okay, nothing speci","<br />Popcorn is okay, nothing special. Contact me@test.com or 0412 345 678"
+385,B000025,U385,x,0,0,3,1757506841,"Popcorn is okay, nothing speci","<br />Popcorn is okay, nothing special. Contact me@test.com or 0412 345 678"
+386,B000026,U386,x,0,0,5,1757420441,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+387,B000027,U387,x,0,0,1,1757334041,Overpriced for such a small ba,<br />Overpriced for such a small bag of pretzels. Contact me@test.com or 0412 345 678
+388,B000028,U388,x,0,0,5,1757247641,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+389,B000029,U389,x,0,0,2,1757161241,Overpriced for such a small ba,<br />Overpriced for such a small bag of pretzels. Contact me@test.com or 0412 345 678
+390,B000030,U390,x,0,0,2,1757074841,"Cookies were stale and soggy, ","<br />Cookies were stale and soggy, very disappointed. Contact me@test.com or 0412 345 678"
+391,B000031,U391,x,0,0,3,1756988441,"Popcorn is okay, nothing speci","<br />Popcorn is okay, nothing special. Contact me@test.com or 0412 345 678"
+392,B000032,U392,x,0,0,2,1756902041,The bag arrived crushed and th,<br />The bag arrived crushed and the chips were all broken. Contact me@test.com or 0412 345 678
+393,B000033,U393,x,0,0,1,1756815641,"Way too sweet, artificial swee","<br />Way too sweet, artificial sweetener aftertaste is awful. Contact me@test.com or 0412 345 678"
+394,B000034,U394,x,0,0,3,1756729241,"Popcorn is okay, nothing speci","<br />Popcorn is okay, nothing special. Contact me@test.com or 0412 345 678"
+395,B000035,U395,x,0,0,2,1756642841,Overpriced for such a small ba,<br />Overpriced for such a small bag of pretzels. Contact me@test.com or 0412 345 678
+396,B000036,U396,x,0,0,2,1756556441,The bag arrived crushed and th,<br />The bag arrived crushed and the chips were all broken. Contact me@test.com or 0412 345 678
+397,B000037,U397,x,0,0,5,1756470041,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+398,B000038,U398,x,0,0,2,1756383641,"Way too sweet, artificial swee","<br />Way too sweet, artificial sweetener aftertaste is awful. Contact me@test.com or 0412 345 678"
+399,B000039,U399,x,0,0,5,1756297241,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+400,B000000,U400,x,0,0,5,1756210841,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+401,B000001,U401,x,0,0,2,1756124441,"Cookies were stale and soggy, ","<br />Cookies were stale and soggy, very disappointed. Contact me@test.com or 0412 345 678"
+402,B000002,U402,x,0,0,3,1756038041,"Popcorn is okay, nothing speci","<br />Popcorn is okay, nothing special. Contact me@test.com or 0412 345 678"
+403,B000003,U403,x,0,0,5,1755951641,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+404,B000004,U404,x,0,0,5,1755865241,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+405,B000005,U405,x,0,0,5,1755778841,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+406,B000006,U406,x,0,0,5,1755692441,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+407,B000007,U407,x,0,0,5,1755606041,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+408,B000008,U408,x,0,0,1,1755519641,The bag arrived crushed and th,<br />The bag arrived crushed and the chips were all broken. Contact me@test.com or 0412 345 678
+409,B000009,U409,x,0,0,5,1755433241,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+410,B000010,U410,x,0,0,5,1755346841,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+411,B000011,U411,x,0,0,5,1755260441,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+412,B000012,U412,x,0,0,5,1755174041,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+413,B000013,U413,x,0,0,5,1755087641,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+414,B000014,U414,x,0,0,5,1755001241,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+415,B000015,U415,x,0,0,5,1754914841,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+416,B000016,U416,x,0,0,2,1754828441,Overpriced for such a small ba,<br />Overpriced for such a small bag of pretzels. Contact me@test.com or 0412 345 678
+417,B000017,U417,x,0,0,5,1754742041,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+418,B000018,U418,x,0,0,1,1754655641,Overpriced for such a small ba,<br />Overpriced for such a small bag of pretzels. Contact me@test.com or 0412 345 678
+419,B000019,U419,x,0,0,2,1754569241,The bag arrived crushed and th,<br />The bag arrived crushed and the chips were all broken. Contact me@test.com or 0412 345 678
+420,B000020,U420,x,0,0,3,1754482841,"Popcorn is okay, nothing speci","<br />Popcorn is okay, nothing special. Contact me@test.com or 0412 345 678"
+421,B000021,U421,x,0,0,5,1754396441,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+422,B000022,U422,x,0,0,1,1754310041,Shipping was late and the box ,<br />Shipping was late and the box was damaged. Contact me@test.com or 0412 345 678
+423,B000023,U423,x,0,0,5,1754223641,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+424,B000024,U424,x,0,0,1,1754137241,"Cookies were stale and soggy, ","<br />Cookies were stale and soggy, very disappointed. Contact me@test.com or 0412 345 678"
+425,B000025,U425,x,0,0,3,1754050841,"Popcorn is okay, nothing speci","<br />Popcorn is okay, nothing special. Contact me@test.com or 0412 345 678"
+426,B000026,U426,x,0,0,1,1753964441,Shipping was late and the box ,<br />Shipping was late and the box was damaged. Contact me@test.com or 0412 345 678
+427,B000027,U427,x,0,0,1,1753878041,Overpriced for such a small ba,<br />Overpriced for such a small bag of pretzels. Contact me@test.com or 0412 345 678
+428,B000028,U428,x,0,0,1,1753791641,Overpriced for such a small ba,<br />Overpriced for such a small bag of pretzels. Contact me@test.com or 0412 345 678
+429,B000029,U429,x,0,0,2,1753705241,The bag arrived crushed and th,<br />The bag arrived crushed and the chips were all broken. Contact me@test.com or 0412 345 678
+430,B000030,U430,x,0,0,5,1753618841,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+431,B000031,U431,x,0,0,1,1753532441,The bag arrived crushed and th,<br />The bag arrived crushed and the chips were all broken. Contact me@test.com or 0412 345 678
+432,B000032,U432,x,0,0,2,1753446041,"Way too sweet, artificial swee","<br />Way too sweet, artificial sweetener aftertaste is awful. Contact me@test.com or 0412 345 678"
+433,B000033,U433,x,0,0,1,1753359641,Overpriced for such a small ba,<br />Overpriced for such a small bag of pretzels. Contact me@test.com or 0412 345 678
+434,B000034,U434,x,0,0,2,1753273241,"Cookies were stale and soggy, ","<br />Cookies were stale and soggy, very disappointed. Contact me@test.com or 0412 345 678"
+435,B000035,U435,x,0,0,5,1753186841,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+436,B000036,U436,x,0,0,3,1753100441,"Popcorn is okay, nothing speci","<br />Popcorn is okay, nothing special. Contact me@test.com or 0412 345 678"
+437,B000037,U437,x,0,0,5,1753014041,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+438,B000038,U438,x,0,0,2,1752927641,The bag arrived crushed and th,<br />The bag arrived crushed and the chips were all broken. Contact me@test.com or 0412 345 678
+439,B000039,U439,x,0,0,3,1752841241,"Popcorn is okay, nothing speci","<br />Popcorn is okay, nothing special. Contact me@test.com or 0412 345 678"
+440,B000000,U440,x,0,0,2,1752754841,The bag arrived crushed and th,<br />The bag arrived crushed and the chips were all broken. Contact me@test.com or 0412 345 678
+441,B000001,U441,x,0,0,5,1752668441,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+442,B000002,U442,x,0,0,5,1752582041,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+443,B000003,U443,x,0,0,3,1752495641,Decent snack bar but the price,<br />Decent snack bar but the price is high for what you get. Contact me@test.com or 0412 345 678
+444,B000004,U444,x,0,0,2,1752409241,Shipping was late and the box ,<br />Shipping was late and the box was damaged. Contact me@test.com or 0412 345 678
+445,B000005,U445,x,0,0,3,1752322841,"Popcorn is okay, nothing speci","<br />Popcorn is okay, nothing special. Contact me@test.com or 0412 345 678"
+446,B000006,U446,x,0,0,2,1752236441,Shipping was late and the box ,<br />Shipping was late and the box was damaged. Contact me@test.com or 0412 345 678
+447,B000007,U447,x,0,0,5,1752150041,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+448,B000008,U448,x,0,0,5,1752063641,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+449,B000009,U449,x,0,0,3,1751977241,"Popcorn is okay, nothing speci","<br />Popcorn is okay, nothing special. Contact me@test.com or 0412 345 678"
+450,B000010,U450,x,0,0,2,1751890841,Shipping was late and the box ,<br />Shipping was late and the box was damaged. Contact me@test.com or 0412 345 678
+451,B000011,U451,x,0,0,5,1751804441,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+452,B000012,U452,x,0,0,5,1751718041,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+453,B000013,U453,x,0,0,1,1751631641,Shipping was late and the box ,<br />Shipping was late and the box was damaged. Contact me@test.com or 0412 345 678
+454,B000014,U454,x,0,0,2,1751545241,"Way too sweet, artificial swee","<br />Way too sweet, artificial sweetener aftertaste is awful. Contact me@test.com or 0412 345 678"
+455,B000015,U455,x,0,0,5,1751458841,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+456,B000016,U456,x,0,0,5,1751372441,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+457,B000017,U457,x,0,0,1,1751286041,"Cookies were stale and soggy, ","<br />Cookies were stale and soggy, very disappointed. Contact me@test.com or 0412 345 678"
+458,B000018,U458,x,0,0,1,1751199641,Shipping was late and the box ,<br />Shipping was late and the box was damaged. Contact me@test.com or 0412 345 678
+459,B000019,U459,x,0,0,5,1751113241,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+460,B000020,U460,x,0,0,3,1751026841,Decent snack bar but the price,<br />Decent snack bar but the price is high for what you get. Contact me@test.com or 0412 345 678
+461,B000021,U461,x,0,0,3,1750940441,Decent snack bar but the price,<br />Decent snack bar but the price is high for what you get. Contact me@test.com or 0412 345 678
+462,B000022,U462,x,0,0,1,1750854041,"Cookies were stale and soggy, ","<br />Cookies were stale and soggy, very disappointed. Contact me@test.com or 0412 345 678"
+463,B000023,U463,x,0,0,2,1750767641,Overpriced for such a small ba,<br />Overpriced for such a small bag of pretzels. Contact me@test.com or 0412 345 678
+464,B000024,U464,x,0,0,3,1750681241,"Popcorn is okay, nothing speci","<br />Popcorn is okay, nothing special. Contact me@test.com or 0412 345 678"
+465,B000025,U465,x,0,0,1,1750594841,The bag arrived crushed and th,<br />The bag arrived crushed and the chips were all broken. Contact me@test.com or 0412 345 678
+466,B000026,U466,x,0,0,2,1750508441,Shipping was late and the box ,<br />Shipping was late and the box was damaged. Contact me@test.com or 0412 345 678
+467,B000027,U467,x,0,0,2,1750422041,"Way too sweet, artificial swee","<br />Way too sweet, artificial sweetener aftertaste is awful. Contact me@test.com or 0412 345 678"
+468,B000028,U468,x,0,0,5,1750335641,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+469,B000029,U469,x,0,0,2,1750249241,"Way too sweet, artificial swee","<br />Way too sweet, artificial sweetener aftertaste is awful. Contact me@test.com or 0412 345 678"
+470,B000030,U470,x,0,0,2,1750162841,Shipping was late and the box ,<br />Shipping was late and the box was damaged. Contact me@test.com or 0412 345 678
+471,B000031,U471,x,0,0,3,1750076441,"Popcorn is okay, nothing speci","<br />Popcorn is okay, nothing special. Contact me@test.com or 0412 345 678"
+472,B000032,U472,x,0,0,1,1749990041,Overpriced for such a small ba,<br />Overpriced for such a small bag of pretzels. Contact me@test.com or 0412 345 678
+473,B000033,U473,x,0,0,1,1749903641,Shipping was late and the box ,<br />Shipping was late and the box was damaged. Contact me@test.com or 0412 345 678
+474,B000034,U474,x,0,0,2,1749817241,Shipping was late and the box ,<br />Shipping was late and the box was damaged. Contact me@test.com or 0412 345 678
+475,B000035,U475,x,0,0,5,1749730841,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+476,B000036,U476,x,0,0,1,1749644441,Overpriced for such a small ba,<br />Overpriced for such a small bag of pretzels. Contact me@test.com or 0412 345 678
+477,B000037,U477,x,0,0,3,1749558041,Decent snack bar but the price,<br />Decent snack bar but the price is high for what you get. Contact me@test.com or 0412 345 678
+478,B000038,U478,x,0,0,1,1749471641,"Cookies were stale and soggy, ","<br />Cookies were stale and soggy, very disappointed. Contact me@test.com or 0412 345 678"
+479,B000039,U479,x,0,0,1,1749385241,Overpriced for such a small ba,<br />Overpriced for such a small bag of pretzels. Contact me@test.com or 0412 345 678
+480,B000000,U480,x,0,0,1,1749298841,"Cookies were stale and soggy, ","<br />Cookies were stale and soggy, very disappointed. Contact me@test.com or 0412 345 678"
+481,B000001,U481,x,0,0,5,1749212441,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+482,B000002,U482,x,0,0,5,1749126041,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+483,B000003,U483,x,0,0,5,1749039641,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+484,B000004,U484,x,0,0,5,1748953241,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+485,B000005,U485,x,0,0,3,1748866841,"Popcorn is okay, nothing speci","<br />Popcorn is okay, nothing special. Contact me@test.com or 0412 345 678"
+486,B000006,U486,x,0,0,3,1748780441,"Popcorn is okay, nothing speci","<br />Popcorn is okay, nothing special. Contact me@test.com or 0412 345 678"
+487,B000007,U487,x,0,0,5,1748694041,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+488,B000008,U488,x,0,0,3,1748607641,Decent snack bar but the price,<br />Decent snack bar but the price is high for what you get. Contact me@test.com or 0412 345 678
+489,B000009,U489,x,0,0,3,1748521241,Decent snack bar but the price,<br />Decent snack bar but the price is high for what you get. Contact me@test.com or 0412 345 678
+490,B000010,U490,x,0,0,5,1748434841,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+491,B000011,U491,x,0,0,2,1748348441,The bag arrived crushed and th,<br />The bag arrived crushed and the chips were all broken. Contact me@test.com or 0412 345 678
+492,B000012,U492,x,0,0,5,1748262041,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+493,B000013,U493,x,0,0,2,1748175641,"Cookies were stale and soggy, ","<br />Cookies were stale and soggy, very disappointed. Contact me@test.com or 0412 345 678"
+494,B000014,U494,x,0,0,5,1748089241,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+495,B000015,U495,x,0,0,1,1748002841,Overpriced for such a small ba,<br />Overpriced for such a small bag of pretzels. Contact me@test.com or 0412 345 678
+496,B000016,U496,x,0,0,1,1747916441,"Way too sweet, artificial swee","<br />Way too sweet, artificial sweetener aftertaste is awful. Contact me@test.com or 0412 345 678"
+497,B000017,U497,x,0,0,2,1747830041,"Way too sweet, artificial swee","<br />Way too sweet, artificial sweetener aftertaste is awful. Contact me@test.com or 0412 345 678"
+498,B000018,U498,x,0,0,2,1747743641,Overpriced for such a small ba,<br />Overpriced for such a small bag of pretzels. Contact me@test.com or 0412 345 678
+499,B000019,U499,x,0,0,3,1747657241,"Popcorn is okay, nothing speci","<br />Popcorn is okay, nothing special. Contact me@test.com or 0412 345 678"
+500,B000020,U500,x,0,0,5,1747570841,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+501,B000021,U501,x,0,0,3,1747484441,Decent snack bar but the price,<br />Decent snack bar but the price is high for what you get. Contact me@test.com or 0412 345 678
+502,B000022,U502,x,0,0,5,1747398041,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+503,B000023,U503,x,0,0,2,1747311641,Shipping was late and the box ,<br />Shipping was late and the box was damaged. Contact me@test.com or 0412 345 678
+504,B000024,U504,x,0,0,5,1747225241,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+505,B000025,U505,x,0,0,5,1747138841,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+506,B000026,U506,x,0,0,3,1747052441,Decent snack bar but the price,<br />Decent snack bar but the price is high for what you get. Contact me@test.com or 0412 345 678
+507,B000027,U507,x,0,0,5,1746966041,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+508,B000028,U508,x,0,0,2,1746879641,Overpriced for such a small ba,<br />Overpriced for such a small bag of pretzels. Contact me@test.com or 0412 345 678
+509,B000029,U509,x,0,0,1,1746793241,"Cookies were stale and soggy, ","<br />Cookies were stale and soggy, very disappointed. Contact me@test.com or 0412 345 678"
+510,B000030,U510,x,0,0,3,1746706841,Decent snack bar but the price,<br />Decent snack bar but the price is high for what you get. Contact me@test.com or 0412 345 678
+511,B000031,U511,x,0,0,1,1746620441,The bag arrived crushed and th,<br />The bag arrived crushed and the chips were all broken. Contact me@test.com or 0412 345 678
+512,B000032,U512,x,0,0,1,1746534041,Overpriced for such a small ba,<br />Overpriced for such a small bag of pretzels. Contact me@test.com or 0412 345 678
+513,B000033,U513,x,0,0,5,1746447641,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+514,B000034,U514,x,0,0,1,1746361241,The bag arrived crushed and th,<br />The bag arrived crushed and the chips were all broken. Contact me@test.com or 0412 345 678
+515,B000035,U515,x,0,0,2,1746274841,"Cookies were stale and soggy, ","<br />Cookies were stale and soggy, very disappointed. Contact me@test.com or 0412 345 678"
+516,B000036,U516,x,0,0,5,1746188441,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+517,B000037,U517,x,0,0,5,1746102041,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+518,B000038,U518,x,0,0,1,1746015641,Overpriced for such a small ba,<br />Overpriced for such a small bag of pretzels. Contact me@test.com or 0412 345 678
+519,B000039,U519,x,0,0,1,1745929241,Overpriced for such a small ba,<br />Overpriced for such a small bag of pretzels. Contact me@test.com or 0412 345 678
+520,B000000,U520,x,0,0,5,1745842841,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+521,B000001,U521,x,0,0,5,1745756441,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+522,B000002,U522,x,0,0,5,1745670041,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+523,B000003,U523,x,0,0,1,1745583641,The bag arrived crushed and th,<br />The bag arrived crushed and the chips were all broken. Contact me@test.com or 0412 345 678
+524,B000004,U524,x,0,0,1,1745497241,Overpriced for such a small ba,<br />Overpriced for such a small bag of pretzels. Contact me@test.com or 0412 345 678
+525,B000005,U525,x,0,0,1,1745410841,Shipping was late and the box ,<br />Shipping was late and the box was damaged. Contact me@test.com or 0412 345 678
+526,B000006,U526,x,0,0,2,1745324441,"Cookies were stale and soggy, ","<br />Cookies were stale and soggy, very disappointed. Contact me@test.com or 0412 345 678"
+527,B000007,U527,x,0,0,1,1745238041,The bag arrived crushed and th,<br />The bag arrived crushed and the chips were all broken. Contact me@test.com or 0412 345 678
+528,B000008,U528,x,0,0,1,1745151641,"Way too sweet, artificial swee","<br />Way too sweet, artificial sweetener aftertaste is awful. Contact me@test.com or 0412 345 678"
+529,B000009,U529,x,0,0,1,1745065241,The bag arrived crushed and th,<br />The bag arrived crushed and the chips were all broken. Contact me@test.com or 0412 345 678
+530,B000010,U530,x,0,0,5,1744978841,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+531,B000011,U531,x,0,0,2,1744892441,"Way too sweet, artificial swee","<br />Way too sweet, artificial sweetener aftertaste is awful. Contact me@test.com or 0412 345 678"
+532,B000012,U532,x,0,0,1,1744806041,The bag arrived crushed and th,<br />The bag arrived crushed and the chips were all broken. Contact me@test.com or 0412 345 678
+533,B000013,U533,x,0,0,5,1744719641,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+534,B000014,U534,x,0,0,5,1744633241,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+535,B000015,U535,x,0,0,5,1744546841,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+536,B000016,U536,x,0,0,5,1744460441,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+537,B000017,U537,x,0,0,2,1744374041,"Way too sweet, artificial swee","<br />Way too sweet, artificial sweetener aftertaste is awful. Contact me@test.com or 0412 345 678"
+538,B000018,U538,x,0,0,3,1744287641,"Popcorn is okay, nothing speci","<br />Popcorn is okay, nothing special. Contact me@test.com or 0412 345 678"
+539,B000019,U539,x,0,0,5,1744201241,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+540,B000020,U540,x,0,0,5,1744114841,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+541,B000021,U541,x,0,0,5,1744028441,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+542,B000022,U542,x,0,0,2,1743942041,"Way too sweet, artificial swee","<br />Way too sweet, artificial sweetener aftertaste is awful. Contact me@test.com or 0412 345 678"
+543,B000023,U543,x,0,0,5,1743855641,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+544,B000024,U544,x,0,0,1,1743769241,"Way too sweet, artificial swee","<br />Way too sweet, artificial sweetener aftertaste is awful. Contact me@test.com or 0412 345 678"
+545,B000025,U545,x,0,0,3,1743682841,"Popcorn is okay, nothing speci","<br />Popcorn is okay, nothing special. Contact me@test.com or 0412 345 678"
+546,B000026,U546,x,0,0,5,1743596441,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+547,B000027,U547,x,0,0,5,1743510041,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+548,B000028,U548,x,0,0,5,1743423641,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+549,B000029,U549,x,0,0,2,1743337241,The bag arrived crushed and th,<br />The bag arrived crushed and the chips were all broken. Contact me@test.com or 0412 345 678
+550,B000030,U550,x,0,0,2,1743250841,Shipping was late and the box ,<br />Shipping was late and the box was damaged. Contact me@test.com or 0412 345 678
+551,B000031,U551,x,0,0,2,1743164441,The bag arrived crushed and th,<br />The bag arrived crushed and the chips were all broken. Contact me@test.com or 0412 345 678
+552,B000032,U552,x,0,0,1,1743078041,"Way too sweet, artificial swee","<br />Way too sweet, artificial sweetener aftertaste is awful. Contact me@test.com or 0412 345 678"
+553,B000033,U553,x,0,0,1,1742991641,The bag arrived crushed and th,<br />The bag arrived crushed and the chips were all broken. Contact me@test.com or 0412 345 678
+554,B000034,U554,x,0,0,5,1742905241,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+555,B000035,U555,x,0,0,1,1742818841,The bag arrived crushed and th,<br />The bag arrived crushed and the chips were all broken. Contact me@test.com or 0412 345 678
+556,B000036,U556,x,0,0,3,1742732441,Decent snack bar but the price,<br />Decent snack bar but the price is high for what you get. Contact me@test.com or 0412 345 678
+557,B000037,U557,x,0,0,3,1742646041,"Popcorn is okay, nothing speci","<br />Popcorn is okay, nothing special. Contact me@test.com or 0412 345 678"
+558,B000038,U558,x,0,0,5,1742559641,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+559,B000039,U559,x,0,0,3,1742473241,"Popcorn is okay, nothing speci","<br />Popcorn is okay, nothing special. Contact me@test.com or 0412 345 678"
+560,B000000,U560,x,0,0,5,1742386841,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+561,B000001,U561,x,0,0,2,1742300441,"Cookies were stale and soggy, ","<br />Cookies were stale and soggy, very disappointed. Contact me@test.com or 0412 345 678"
+562,B000002,U562,x,0,0,3,1742214041,Decent snack bar but the price,<br />Decent snack bar but the price is high for what you get. Contact me@test.com or 0412 345 678
+563,B000003,U563,x,0,0,3,1742127641,Decent snack bar but the price,<br />Decent snack bar but the price is high for what you get. Contact me@test.com or 0412 345 678
+564,B000004,U564,x,0,0,5,1742041241,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+565,B000005,U565,x,0,0,1,1741954841,"Way too sweet, artificial swee","<br />Way too sweet, artificial sweetener aftertaste is awful. Contact me@test.com or 0412 345 678"
+566,B000006,U566,x,0,0,3,1741868441,Decent snack bar but the price,<br />Decent snack bar but the price is high for what you get. Contact me@test.com or 0412 345 678
+567,B000007,U567,x,0,0,5,1741782041,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+568,B000008,U568,x,0,0,1,1741695641,Shipping was late and the box ,<br />Shipping was late and the box was damaged. Contact me@test.com or 0412 345 678
+569,B000009,U569,x,0,0,5,1741609241,These chips are so crunchy and,<br />These chips are so crunchy and the flavour is delicious. Contact me@test.com or 0412 345 678
+570,B000010,U570,x,0,0,5,1741522841,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+571,B000011,U571,x,0,0,5,1741436441,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+572,B000012,U572,x,0,0,1,1741350041,"Cookies were stale and soggy, ","<br />Cookies were stale and soggy, very disappointed. Contact me@test.com or 0412 345 678"
+573,B000013,U573,x,0,0,5,1741263641,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+574,B000014,U574,x,0,0,1,1741177241,The bag arrived crushed and th,<br />The bag arrived crushed and the chips were all broken. Contact me@test.com or 0412 345 678
+575,B000015,U575,x,0,0,1,1741090841,The bag arrived crushed and th,<br />The bag arrived crushed and the chips were all broken. Contact me@test.com or 0412 345 678
+576,B000016,U576,x,0,0,1,1741004441,Overpriced for such a small ba,<br />Overpriced for such a small bag of pretzels. Contact me@test.com or 0412 345 678
+577,B000017,U577,x,0,0,5,1740918041,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+578,B000018,U578,x,0,0,3,1740831641,Decent snack bar but the price,<br />Decent snack bar but the price is high for what you get. Contact me@test.com or 0412 345 678
+579,B000019,U579,x,0,0,2,1740745241,"Cookies were stale and soggy, ","<br />Cookies were stale and soggy, very disappointed. Contact me@test.com or 0412 345 678"
+580,B000020,U580,x,0,0,2,1740658841,Shipping was late and the box ,<br />Shipping was late and the box was damaged. Contact me@test.com or 0412 345 678
+581,B000021,U581,x,0,0,5,1740572441,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+582,B000022,U582,x,0,0,1,1740486041,"Way too sweet, artificial swee","<br />Way too sweet, artificial sweetener aftertaste is awful. Contact me@test.com or 0412 345 678"
+583,B000023,U583,x,0,0,5,1740399641,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+584,B000024,U584,x,0,0,5,1740313241,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+585,B000025,U585,x,0,0,5,1740226841,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+586,B000026,U586,x,0,0,5,1740140441,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+587,B000027,U587,x,0,0,5,1740054041,"Love these crackers, perfect t","<br />Love these crackers, perfect texture. Contact me@test.com or 0412 345 678"
+588,B000028,U588,x,0,0,5,1739967641,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+589,B000029,U589,x,0,0,3,1739881241,Decent snack bar but the price,<br />Decent snack bar but the price is high for what you get. Contact me@test.com or 0412 345 678
+590,B000030,U590,x,0,0,2,1739794841,Shipping was late and the box ,<br />Shipping was late and the box was damaged. Contact me@test.com or 0412 345 678
+591,B000031,U591,x,0,0,3,1739708441,Decent snack bar but the price,<br />Decent snack bar but the price is high for what you get. Contact me@test.com or 0412 345 678
+592,B000032,U592,x,0,0,5,1739622041,"Great granola bar, tastes amaz","<br />Great granola bar, tastes amazing. Contact me@test.com or 0412 345 678"
+593,B000033,U593,x,0,0,3,1739535641,Decent snack bar but the price,<br />Decent snack bar but the price is high for what you get. Contact me@test.com or 0412 345 678
+594,B000034,U594,x,0,0,3,1739449241,"Popcorn is okay, nothing speci","<br />Popcorn is okay, nothing special. Contact me@test.com or 0412 345 678"
+595,B000035,U595,x,0,0,1,1739362841,The bag arrived crushed and th,<br />The bag arrived crushed and the chips were all broken. Contact me@test.com or 0412 345 678
+596,B000036,U596,x,0,0,2,1739276441,The bag arrived crushed and th,<br />The bag arrived crushed and the chips were all broken. Contact me@test.com or 0412 345 678
+597,B000037,U597,x,0,0,2,1739190041,Overpriced for such a small ba,<br />Overpriced for such a small bag of pretzels. Contact me@test.com or 0412 345 678
+598,B000038,U598,x,0,0,3,1739103641,Decent snack bar but the price,<br />Decent snack bar but the price is high for what you get. Contact me@test.com or 0412 345 678
+599,B000039,U599,x,0,0,1,1739017241,"Cookies were stale and soggy, ","<br />Cookies were stale and soggy, very disappointed. Contact me@test.com or 0412 345 678"
