@@ -1,0 +1,11 @@
+# Pinned: out/model.joblib is a pickled scikit-learn model, and unpickling it with a
+# different scikit-learn/numpy/scipy build can fail. Regenerate the model if you bump these.
+pandas==3.0.6
+numpy==2.5.3
+scipy==1.18.1
+scikit-learn==1.9.1
+joblib==1.6.0
+nltk==3.10.3
+pyarrow==25.0.1
+streamlit==1.64.0
+plotly==7.1.0
