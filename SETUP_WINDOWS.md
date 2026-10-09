@@ -1,10 +1,10 @@
 # Windows setup from scratch
 
-For a Windows machine with nothing installed — no Python, no Git. Follow in order.
-Expect 30–45 minutes, most of it downloads.
+For a Windows machine with nothing installed (no Python, no Git). Follow the
+steps in order. Most of the 30–45 minutes is downloads.
 
-**You need:** Windows 10 or 11, about 2 GB free disk, and an internet connection.
-A Kaggle account is **not** required.
+**Requirements:** Windows 10 or 11, about 2 GB free disk, internet connection.
+No Kaggle account needed.
 
 ---
 
@@ -13,16 +13,16 @@ A Kaggle account is **not** required.
 Download **Python 3.12** from <https://www.python.org/downloads/windows/>
 (choose "Windows installer (64-bit)").
 
-> Use 3.12, not 3.13 or newer. Some packages don't publish Windows wheels for the
-> newest versions yet, and pip then tries to compile them, which fails without a
+> Use 3.12, not 3.13 or newer. Some packages don't ship Windows wheels for the
+> newest versions, so pip falls back to compiling them, which fails without a
 > C++ compiler installed.
 
 In the installer:
 
-1. **Tick "Add python.exe to PATH"** at the bottom of the first screen. This is the
-   step people miss, and skipping it causes the `'python' is not recognized` error.
+1. **Tick "Add python.exe to PATH"** at the bottom of the first screen.
+   Missing this is what causes the `'python' is not recognized` error later.
 2. Click **Install Now**.
-3. On the last screen, if you see **"Disable path length limit"**, click it.
+3. On the last screen, if **"Disable path length limit"** is shown, click it.
 
 Check it worked. Open **Command Prompt** (press Start, type `cmd`, press Enter):
 
@@ -37,11 +37,10 @@ You should see `Python 3.12.x`. If you get an error, see
 
 ## 2. Install Git
 
-Download from <https://git-scm.com/download/win> and run the installer. Accept every
-default — there is nothing to change.
+Download from <https://git-scm.com/download/win> and run the installer. Accept
+every default.
 
-Skip this step if you are copying the project folder from a USB drive instead of
-cloning it.
+Skip this step if you are copying the project folder from USB instead of cloning.
 
 ---
 
@@ -57,9 +56,9 @@ cd capstone
 
 Replace `<your-repository-url>` with your GitHub URL.
 
-**Copying from USB instead?** Copy the folder to `Documents\capstone`, then
-`cd %USERPROFILE%\Documents\capstone`. Delete any `.venv` folder that came with it —
-a virtual environment built on another machine will not run here.
+**Copying from USB?** Copy the folder to `Documents\capstone`, then
+`cd %USERPROFILE%\Documents\capstone`. Delete any `.venv` folder inside it; a
+virtual environment built on another machine won't run here.
 
 ---
 
@@ -88,10 +87,10 @@ python -m pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-This downloads about 150 MB and takes 3–10 minutes. Installing pandas,
-scikit-learn, Streamlit, Plotly, NLTK and PyArrow.
+About 150 MB of downloads; 3–10 minutes. Installs pandas, scikit-learn,
+Streamlit, Plotly, NLTK, and PyArrow.
 
-Then fetch the sentiment dictionary VADER needs:
+Then fetch the VADER lexicon:
 
 ```
 python -c "import nltk; nltk.download('vader_lexicon')"
@@ -99,21 +98,21 @@ python -c "import nltk; nltk.download('vader_lexicon')"
 
 ---
 
-## 6. Check it works, before downloading any data
+## 6. Smoke-test before downloading data
 
 ```
 python pipeline.py --test
 ```
 
-Expected output: `self-check ok`
+Expected output: `self-check ok`.
 
-Now run the whole pipeline on the 600-row sample that ships with the project:
+Then run the full pipeline on the 600-row sample that ships with the repo:
 
 ```
 python pipeline.py --raw data/Reviews.sample.csv --rows 0 --topics 4
 ```
 
-If that finishes and writes files into `out\`, your setup is correct and you can
+If this writes files to `out\` without errors, your setup is good and you can
 move on to the real dataset.
 
 ---
@@ -124,18 +123,17 @@ move on to the real dataset.
 python fetch_data.py
 ```
 
-This downloads **122 MB** from Stanford SNAP and converts it to
-`data\Reviews.csv` (289 MB, 568,454 reviews). It takes 5–15 minutes depending on
-your connection.
+Downloads **122 MB** from Stanford SNAP and converts it to `data\Reviews.csv`
+(289 MB, 568,454 reviews). 5–15 minutes depending on connection.
 
-No Kaggle account or API token is needed — SNAP is the original source that Kaggle
-repackages.
+No Kaggle account or API token is needed; SNAP is the original source that
+Kaggle repackages.
 
 ---
 
 ## 8. Run the pipeline
 
-Start with a sample to confirm everything holds together:
+Start with a sample to confirm the pipeline runs end to end:
 
 ```
 python pipeline.py --rows 50000
@@ -147,9 +145,9 @@ Then the full dataset:
 python pipeline.py --rows 0 --topics 12
 ```
 
-The full run takes **3–6 minutes** and needs about **4 GB of free RAM**. It prints
-the ingestion funnel, the accuracy report, and the ranked opportunities, then writes
-to `out\`.
+The full run is **3–6 minutes** and needs about **4 GB of free RAM**. It prints
+the ingestion funnel, accuracy report, and ranked opportunities, then writes
+the parquet files into `out\`.
 
 ---
 
@@ -159,8 +157,8 @@ to `out\`.
 streamlit run app.py
 ```
 
-Your browser opens at <http://localhost:8501>. Leave the Command Prompt window open
-while you use it — closing it stops the dashboard.
+Your browser opens at <http://localhost:8501>. Keep the Command Prompt window
+open while you use the dashboard; closing it stops the server.
 
 Press `Ctrl+C` in Command Prompt to stop.
 
@@ -168,7 +166,7 @@ Press `Ctrl+C` in Command Prompt to stop.
 
 ## Coming back later
 
-Every new Command Prompt session needs the environment activated first:
+Each new Command Prompt session needs the virtual environment reactivated:
 
 ```
 cd %USERPROFILE%\Documents\capstone
@@ -176,47 +174,47 @@ cd %USERPROFILE%\Documents\capstone
 streamlit run app.py
 ```
 
-Steps 1–7 are one-time only.
+Steps 1–7 only need to be done once.
 
 ---
 
 ## Troubleshooting
 
 **`'python' is not recognized as an internal or external command`**
-Python isn't on PATH. Either reinstall and tick "Add python.exe to PATH", or use
-`py` instead of `python` everywhere.
+Python is not on PATH. Either reinstall and tick "Add python.exe to PATH", or
+use `py` instead of `python` everywhere.
 
 **`'pip' is not recognized`**
 Use `python -m pip` instead of `pip`.
 
 **`running scripts is disabled on this system`** (PowerShell only)
-See the note in step 4, or just use Command Prompt.
+See the note in step 4, or switch to Command Prompt.
 
 **`Microsoft Visual C++ 14.0 or greater is required`**
-pip is trying to compile a package from source because no wheel exists for your
-Python version. Install Python 3.12 rather than a newer release.
+pip is trying to compile a package from source because no wheel exists for
+your Python version. Install Python 3.12 instead of a newer release.
 
 **`Resource vader_lexicon not found`**
-Re-run the download command at the end of step 5 with the environment activated.
+Re-run the download command at the end of step 5 with the venv activated.
 
 **`SSL: CERTIFICATE_VERIFY_FAILED`**
-Common on university or corporate networks that inspect traffic. Try a home network
-or a phone hotspot.
+Common on university or corporate networks that inspect traffic. Try a home
+network or a phone hotspot.
 
 **`MemoryError`, or the machine freezes during the full run**
-Close other applications, or work with a sample instead:
+Close other applications, or run on a sample:
 `python pipeline.py --rows 100000`
 
 **`Port 8501 is already in use`**
-A dashboard is already running — check your other windows, or use a different port:
+Another Streamlit is already running. Close it, or pick a different port:
 `streamlit run app.py --server.port 8502`
 
 **`FileNotFoundError: data/Reviews.csv`**
-You skipped step 7. The dataset is too large to store in Git, so every machine must
-download it.
+Step 7 was skipped. The dataset is too large for Git, so each machine needs
+to download it.
 
-**`No results yet. Run pipeline.py first.`** (shown in the dashboard)
-The `out\` folder is empty. Run step 8 before step 9.
+**`No results yet. Run pipeline.py first.`** (in the dashboard)
+`out\` is empty. Run step 8 before step 9.
 
 ---
 
@@ -230,4 +228,4 @@ The `out\` folder is empty. Run step 8 before step 9.
 | Results | `capstone\out` | ~45 MB |
 
 To remove everything, delete the `capstone` folder and uninstall Python from
-Settings → Apps.
+Settings > Apps.
