@@ -1,9 +1,9 @@
-# CR-POE — Customer Review Mining and Product Opportunity Engine
+# CR-POE: Customer Review Mining and Product Opportunity Engine
 
-Reads customer reviews and returns a ranked list of product opportunities, each
-backed by real customer quotes.
+Mines customer reviews and ranks product opportunities, with the supporting
+quotes attached to each one.
 
-ICT802 Capstone · Group M36 · Sponsor: Crunch Collective
+ICT802 Capstone, Group M36. Sponsor: Crunch Collective.
 
 ## Run locally
 
@@ -22,45 +22,45 @@ Windows from scratch, with no Python installed: see [SETUP_WINDOWS.md](SETUP_WIN
 
 ## Hosting on Streamlit Community Cloud
 
-Streamlit Cloud runs `app.py` only — it never runs `pipeline.py` or `fetch_data.py`.
-So the model and scored reviews in `out/` are committed to this repo, and the app
-reads them directly. Point Streamlit Cloud at `app.py` and it works with no
-further configuration.
+Streamlit Cloud only runs `app.py`, not the pipeline. The model and scored
+reviews in `out/` are committed so the hosted app can read them directly.
+Point Streamlit Cloud at `app.py` and it works with no extra config.
 
-To refresh what is hosted, rebuild locally and commit `out/`:
+To refresh the hosted copy, rebuild locally and commit `out/`:
 
 ```bash
 python pipeline.py --rows 0 --topics 12 --sample 15000
 git add out && git commit -m "Refresh hosted model"
 ```
 
-`--sample` keeps a stratified subset of the scored reviews so the committed file
-stays small and fits the free tier's memory limit. Topic modelling and all
-statistics still use the full 65,348 reviews; only the stored evidence is trimmed.
+`--sample` keeps a stratified subset of scored reviews so the committed parquet
+fits the free tier's memory. Topic modelling and all stats still run on the
+full 65,348 reviews; only the stored evidence rows are trimmed.
 
 ## What it does
 
-1. **Ingest** — load reviews from CSV.
-2. **Clean** — remove duplicates and markup, redact emails, phones, order IDs, handles.
-3. **Sentiment** — score each review from −1 to +1 with VADER, extended with snack-domain words.
-4. **Topics** — LDA fitted on complaint reviews, named by each topic's distinctive keywords.
-5. **Rank** — `opportunity = topic frequency × negativity lift`, where lift compares a
-   topic against the corpus baseline.
-6. **Present** — Streamlit dashboard:
-   - **Opportunities** — ranked chart, prioritisation matrix with recommended actions, CSV export
-   - **Review explorer** — filter by topic and sentiment, verbatim evidence, PII redaction toggle
-   - **Live simulator** — paste any review and run it through the real model
+1. **Ingest.** Load reviews from CSV.
+2. **Clean.** Drop duplicates and markup; redact emails, phones, order IDs, handles.
+3. **Sentiment.** Score each review from −1 to +1 with VADER, extended with snack-domain words.
+4. **Topics.** LDA fitted on complaint reviews, labelled by each topic's distinctive keywords.
+5. **Rank.** `opportunity = topic frequency × negativity lift`, where lift is
+   the topic's % negative over the corpus baseline.
+6. **Present.** Streamlit dashboard with three tabs:
+   - *Opportunities:* ranked chart, prioritisation matrix with recommended actions, CSV export.
+   - *Review explorer:* filter by topic and sentiment, verbatim evidence, PII redaction toggle.
+   - *Live simulator:* paste any review and run it through the fitted model.
 
 ## Data
 
-**Amazon Fine Food Reviews** — Stanford SNAP, public and free, no account needed.
-`fetch_data.py` downloads from the primary source and converts it to CSV.
+Amazon Fine Food Reviews, from Stanford SNAP (public, no account needed).
+`fetch_data.py` downloads the archive and converts it to the CSV layout the
+pipeline reads.
 
 > J. McAuley and J. Leskovec, "From amateurs to connoisseurs: modeling the evolution
 > of user expertise through online reviews," *Proc. WWW*, 2013.
 
-A 600-row fixture (`data/Reviews.sample.csv`) ships with the repo so the pipeline runs
-before anything is downloaded:
+A 600-row fixture (`data/Reviews.sample.csv`) is in the repo so the pipeline
+can be smoke-tested before downloading anything:
 
 ```bash
 python pipeline.py --raw data/Reviews.sample.csv --rows 0 --topics 4
@@ -76,14 +76,14 @@ Corpus funnel on the full dataset:
 
 ## Results
 
-Sentiment accuracy against star ratings, binary (3-star excluded): **weighted F1 0.884**.
+Sentiment accuracy vs. star ratings (binary, 3-star excluded): **weighted F1 0.884**.
 
-Known limitations, measured not assumed:
+Known limitations (from the evaluation output, not assumed):
 
-- Neutral class fails (F1 0.04) — VADER cannot detect mixed reviews
-- Negative recall 0.42 — under half of complaints are caught
-- Sarcasm scores positive
-- Three of twelve topics are unlabelled; the snack keyword filter leaks off-domain products
+- Neutral class fails (F1 0.04); VADER does not handle mixed reviews.
+- Negative recall 0.42: just under half of complaints are caught.
+- Sarcasm tends to score positive.
+- Three of twelve topics stay unlabelled, and the snack keyword filter leaks a few off-domain products.
 
 ## Files
 
@@ -98,4 +98,3 @@ Known limitations, measured not assumed:
 ## Stack
 
 Python 3.12, pandas, NLTK (VADER), scikit-learn (LDA), Streamlit, Plotly.
-All free and open source.

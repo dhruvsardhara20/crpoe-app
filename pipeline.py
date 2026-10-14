@@ -1,9 +1,7 @@
-"""CR-POE pipeline: raw reviews CSV -> scored reviews + ranked opportunities.
-
-Usage:
-    python pipeline.py                # 50k sample (development)
-    python pipeline.py --rows 0       # full dataset
-"""
+# CR-POE pipeline. Reads data/Reviews.csv, writes scored reviews and ranked
+# opportunity topics to out/.
+#   python pipeline.py            # 50k sample
+#   python pipeline.py --rows 0   # full dataset
 import argparse
 import os
 import re
@@ -20,11 +18,10 @@ OUT_TOPICS = "out/opportunities.parquet"
 OUT_MODEL = "out/model.joblib"
 OUT_STATS = "out/stats.json"
 
-# ponytail: keyword filter instead of a product taxonomy. ProductIds are opaque
-# Amazon codes, so the review text is the only thing that names the product.
+# ProductIds are opaque Amazon codes, so we filter snack reviews by keyword.
 SNACK_WORDS = r"chip|crisp|cookie|biscuit|cracker|popcorn|pretzel|granola|snack|bar\b|nuts|trail mix"
 
-# Attributes the sponsor cares about. Used to label LDA topics in plain English.
+# Attributes the sponsor cares about. Used to label LDA topics.
 ATTRIBUTES = {
     "taste": r"taste|flavou?r|delicious|bland|yummy",
     "texture": r"crunch|crisp|soggy|stale|chewy|hard|soft",
@@ -35,7 +32,7 @@ ATTRIBUTES = {
     "delivery": r"ship|deliver|arriv|late|prime|order",
 }
 
-# What marketing should actually do about each attribute, by sentiment.
+# Marketing action per attribute, keyed as (if negative lift, if positive).
 ACTIONS = {
     "packaging": ("Escalate to QA and the packaging supplier", "Feature packaging in social proof"),
     "delivery": ("Audit 3PL courier SLAs", "Promote fast dispatch in campaigns"),
@@ -47,9 +44,8 @@ ACTIONS = {
     "other": ("Log to the feedback repository for review", "Log to the feedback repository"),
 }
 
-# VADER's general lexicon has no opinion on snack-specific words, which is the
-# single biggest source of misreads on this corpus. Values are on VADER's -4..+4
-# scale and were set by inspecting misclassified reviews.
+# Domain additions to VADER's lexicon (scale: -4..+4). Set by looking at
+# misclassified reviews; "stale", "soggy" etc. are not in the base lexicon.
 DOMAIN_LEXICON = {
     "stale": -2.6, "soggy": -2.2, "mouldy": -3.2, "moldy": -3.2, "expired": -2.6,
     "crushed": -2.2, "torn": -2.0, "broken": -2.0, "leaked": -2.0, "melted": -1.4,
@@ -57,11 +53,10 @@ DOMAIN_LEXICON = {
     "crunchy": 1.8, "crisp": 1.5, "crispy": 1.8, "fresh": 1.6, "moreish": 2.0,
 }
 
-# Two groups are stopped out on top of the English list. Generic praise words,
-# because otherwise every topic is "like, good, taste, product". And product nouns,
-# because LDA otherwise clusters by product category (cookies / chips / tea) instead
-# of by issue — which product is affected comes from ProductId, not the topic.
-# Removing them took labelled topics from 7/12 to 10/12 on the full corpus.
+# Extra stopwords on top of ENGLISH_STOP_WORDS. Two groups:
+#   - generic praise ("like", "good", "really") that otherwise dominates topics
+#   - product nouns ("chocolate", "cookies", "chips") so LDA clusters by issue
+#     not category. Product is known from ProductId.
 NOISE = """like just good great taste tastes tasted love really product products
 amazon buy bought order ordered try tried get got make makes made price flavor
 flavors flavour snack snacks food eat eating one two also would could box bag bags
@@ -80,8 +75,7 @@ PII = [
     (re.compile(r"\b(?:\+?61|0)[2-478](?:[ -]?\d){8}\b"), "[PHONE]"),
     (re.compile(r"\b\d{3}[-.\s]?\d{3}[-.\s]?\d{4}\b"), "[PHONE]"),
 ]
-# Stage counts, written to out/stats.json so the dashboard can show the funnel
-# rather than only the final figure.
+# Stage counts for the ingest funnel, serialised to out/stats.json.
 FUNNEL: dict[str, int] = {}
 
 TAG = re.compile(r"<[^>]+>")
@@ -90,7 +84,7 @@ SPACE = re.compile(r"\s+")
 
 
 def clean(text: str) -> str:
-    """Redact PII, strip markup, normalise whitespace. Case and negation kept for VADER."""
+    # Case and "not" are kept because VADER needs them.
     text = TAG.sub(" ", str(text))
     text = URL.sub(" ", text)
     for pattern, token in PII:
@@ -99,11 +93,7 @@ def clean(text: str) -> str:
 
 
 def vader():
-    """VADER with the snack-domain words folded into its lexicon.
-
-    Downloads the lexicon if it is missing, so Streamlit Cloud (where no setup
-    command runs) works the same as a local checkout.
-    """
+    # Downloads the lexicon on first use so Streamlit Cloud works without a setup step.
     import nltk
     from nltk.sentiment.vader import SentimentIntensityAnalyzer
 
@@ -120,12 +110,11 @@ def vader():
 def load(rows: int, raw: str = RAW) -> pd.DataFrame:
     df = pd.read_csv(raw, nrows=rows or None)
     FUNNEL["ingested"] = len(df)
-    # Same review is reposted across product variants; key on author + time + text.
+    # Reviews are reposted across product variants; dedupe on author + time + text.
     df = df.drop_duplicates(subset=["UserId", "Time", "Text"])
     FUNNEL["deduplicated"] = len(df)
     df = df[df["Text"].notna() & (df["Text"].str.len() > 20)]
-    snacks = df["Text"].str.contains(SNACK_WORDS, case=False, na=False)
-    df = df[snacks].copy()
+    df = df[df["Text"].str.contains(SNACK_WORDS, case=False, na=False)].copy()
     FUNNEL["snack_reviews"] = len(df)
     for k, v in FUNNEL.items():
         print(f"  {k:16} {v:>9,}  ({v / FUNNEL['ingested']:6.1%})")
@@ -133,7 +122,7 @@ def load(rows: int, raw: str = RAW) -> pd.DataFrame:
     df["raw"] = df["Text"].astype(str)
     df["clean"] = df["Text"].map(clean)
     df["date"] = pd.to_datetime(df["Time"], unit="s")
-    # Star rating is the ground-truth label we validate sentiment against.
+    # star_label is the ground truth we evaluate VADER against.
     df["star_label"] = pd.cut(df["Score"], [0, 2, 3, 5], labels=["negative", "neutral", "positive"])
     return df
 
@@ -148,15 +137,14 @@ def add_sentiment(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def add_topics(df: pd.DataFrame, n_topics: int = 8):
-    # ponytail: min_df scales with corpus size so the same code runs on the
-    # sample fixture and on the full 568k rows.
-    # Fit on complaints only. Fitting on everything produces product-category
-    # topics (cookies, chocolate, chips); the engine needs issue topics.
-    # Stars and VADER are combined so this still works on unrated sponsor data.
+    # Fit LDA on complaints only. Fitting on the whole corpus produces
+    # product-category topics (cookies, chocolate), not issue topics.
+    # Use stars OR VADER so this still works on unrated sponsor data.
     complaints = df[(df["Score"] <= 3) | (df["compound"] < 0.05)]
-    if len(complaints) < 50:  # ponytail: tiny corpora (the fixture) fall back to all rows
+    if len(complaints) < 50:
         complaints = df
     stop = list(ENGLISH_STOP_WORDS) + NOISE
+    # min_df scales with corpus size so the fixture and the 568k row run both work.
     vec = CountVectorizer(
         max_df=0.25, min_df=min(15, max(2, len(complaints) // 50)), stop_words=stop,
         ngram_range=(1, 2), max_features=5000,
@@ -167,10 +155,8 @@ def add_topics(df: pd.DataFrame, n_topics: int = 8):
     print(f"topics fitted on {len(complaints):,} complaint reviews")
     df["topic"] = lda.transform(vec.transform(df["clean"])).argmax(axis=1)
 
-    # A topic's name has to be short enough for a filter pill AND distinctive
-    # enough to tell twelve topics apart. The attribute alone is neither — five
-    # topics matched "health" — so the name is built from the keywords that are
-    # unique to this topic, with the attribute kept as a separate column.
+    # Name topics from the keywords unique to each one (the attribute alone is
+    # too coarse, five topics can map to "health"). Attribute stays as its own column.
     vocab = vec.get_feature_names_out()
     tops = [[vocab[j] for j in w.argsort()[-12:][::-1]] for w in lda.components_]
     names, keywords, attributes = [], [], []
@@ -178,14 +164,15 @@ def add_topics(df: pd.DataFrame, n_topics: int = 8):
         shared = {w for k, other in enumerate(tops) if k != i for w in other[:8]}
         unique = [w for w in words if w not in shared] or words
         matched = [a for a, pat in ATTRIBUTES.items() if re.search(pat, " ".join(words[:6]))]
-        names.append(f"T{i} · {', '.join(unique[:2])}")
+        prefix = matched[0].title() if matched else "Unlabelled"
+        names.append(f"{prefix} · {', '.join(unique[:2])}")
         keywords.append(", ".join(words[:8]))
         attributes.append("/".join(matched[:2]) or "unlabelled")
     return df, (names, keywords, attributes), (vec, lda)
 
 
 def rank(df: pd.DataFrame, labels: tuple[list[str], list[str], list[str]]) -> pd.DataFrame:
-    """Opportunity score = how often a topic comes up x how negative it is."""
+    # Opportunity score = topic frequency * negativity lift vs corpus baseline.
     g = df.groupby("topic")
     out = pd.DataFrame(
         {
@@ -200,10 +187,9 @@ def rank(df: pd.DataFrame, labels: tuple[list[str], list[str], list[str]]) -> pd
     out["keywords"] = [keywords[t] for t in out["topic"]]
     out["attribute"] = [attributes[t] for t in out["topic"]]
     out["frequency"] = out["reviews"] / out["reviews"].sum()
-    out["severity"] = (1 - out["mean_compound"]) / 2  # map compound [-1,1] -> [1,0]
-    # Real corpora are heavily positive (this one is 91% positive), so an absolute
-    # negativity cut-off flags nothing. Score each topic against the corpus
-    # baseline instead: lift 1.5 means the topic is 50% more negative than average.
+    out["severity"] = (1 - out["mean_compound"]) / 2  # compound [-1,1] -> [1,0]
+    # This corpus is 91% positive, so an absolute negativity threshold flags
+    # nothing. Lift is the topic's % negative over the corpus baseline.
     baseline = (df["sentiment"] == "negative").mean() or 1e-9
     out["lift"] = (out["pct_negative"] / baseline).round(2)
     out["severity_score"] = (out["frequency"] * out["severity"] * 100).round(2)
@@ -222,14 +208,14 @@ def accuracy(df: pd.DataFrame) -> None:
     from sklearn.metrics import classification_report
 
     b = df[df["Score"] != 3]
-    print("\nBinary (3-star excluded) — headline metric:")
+    print("\nBinary (3-star excluded):")
     print(classification_report(
         (b["Score"] >= 4).map({True: "positive", False: "negative"}),
         (b["compound"] >= 0.05).map({True: "positive", False: "negative"}),
         zero_division=0, digits=3,
     ))
     ok = df["star_label"].notna() & df["sentiment"].notna()
-    print("Three-class including neutral — VADER cannot detect mixed reviews:")
+    print("Three-class (VADER struggles on mixed reviews):")
     print(classification_report(df.loc[ok, "star_label"], df.loc[ok, "sentiment"],
                                 zero_division=0, digits=3))
 
@@ -261,7 +247,7 @@ def main() -> None:
     if args.test:
         return test()
 
-    os.makedirs("out", exist_ok=True)  # fresh clones have no out/ directory
+    os.makedirs("out", exist_ok=True)
     df = load(args.rows, args.raw)
     df = add_sentiment(df)
     df, labels, model = add_topics(df, args.topics)
@@ -273,7 +259,7 @@ def main() -> None:
     cols = ["ProductId", "date", "Score", "Summary", "raw", "clean", "compound", "sentiment", "topic"]
     saved = df[cols]
     if args.sample and args.sample < len(saved):
-        # Stratify by topic so every topic keeps evidence in the hosted copy.
+        # Stratify by topic so each topic keeps evidence rows after sampling.
         idx = saved.groupby("topic").sample(frac=args.sample / len(saved), random_state=0).index
         saved = saved.loc[idx]
         print(f"saving a {len(saved):,}-row sample for hosting (full run used {len(df):,})")

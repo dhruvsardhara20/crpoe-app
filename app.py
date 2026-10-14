@@ -1,4 +1,5 @@
-"""CR-POE dashboard. Run: streamlit run app.py (needs pipeline.py output first)."""
+# Streamlit dashboard for the CR-POE prototype.
+# Run pipeline.py first to produce the parquet files this reads.
 import json
 import os
 
@@ -38,7 +39,8 @@ PRESETS = {
 
 
 @st.cache_resource
-def load(_stamp):  # ponytail: mtime in the key, so a fresh pipeline run is picked up
+def load(_stamp):
+    # _stamp is the parquet mtime: changing it invalidates the cache after a rerun.
     reviews = pd.read_parquet(OUT_REVIEWS)
     reviews["has_pii"] = reviews["clean"].str.contains(
         r"\[EMAIL\]|\[PHONE\]|\[ORDER_ID\]|\[HANDLE\]", regex=True)
@@ -72,7 +74,6 @@ if funnel:
            if funnel.get("stored_rows", 0) < funnel["snack_reviews"] else "")
     )
 
-# ── KPI row ───────────────────────────────────────────────────────────────────
 top = opps.iloc[0]
 urgent = opps[opps["tier"] == "Urgent fix"]
 k = st.columns(4)
@@ -90,9 +91,9 @@ k[2].metric("Urgent complaint topics", len(urgent),
             help="Topics where most reviews are negative")
 k[3].metric("Top opportunity", top["label"].split("·")[1].strip(), help=top["action"])
 
-tab1, tab2, tab3 = st.tabs(["Opportunities", "Review explorer", "Live simulator"])
+tab1, tab2, tab3, tab4 = st.tabs(
+    ["Opportunities", "Review explorer", "Live simulator", "Problem products"])
 
-# ── Tab 1: ranked opportunities + matrix ──────────────────────────────────────
 with tab1:
     st.plotly_chart(
         px.bar(opps.sort_values("opportunity"), x="opportunity", y="label", orientation="h",
@@ -132,7 +133,6 @@ with tab1:
                             labels={"date": "", "compound": "Mean compound"}),
                     width='stretch')
 
-# ── Tab 2: filterable review cards ────────────────────────────────────────────
 with tab2:
     f = st.columns([3, 2, 2])
     topics = f[0].multiselect("Topic", opps["label"], default=list(opps["label"]))
@@ -164,7 +164,6 @@ with tab2:
           <span class="badge act">{action_of[r['topic']]}</span>
         </div>""", unsafe_allow_html=True)
 
-# ── Tab 3: live pipeline test ─────────────────────────────────────────────────
 with tab3:
     st.subheader("Live review simulator")
     st.caption("Paste any review to run it through the same redaction, VADER scoring and "
@@ -192,10 +191,55 @@ with tab3:
         st.markdown("**Sanitised text**", unsafe_allow_html=True)
         st.markdown(f"<div class='card'>{shown}</div>", unsafe_allow_html=True)
 
-        # Only short values stay in st.metric — it truncates without wrapping.
+        # st.metric truncates long values, so keep these two short.
         out = st.columns(2)
         out[0].metric("Predicted sentiment", mood.title())
         out[1].metric("VADER compound", f"{score:+.2f}")
         st.markdown(f"**LDA topic** — {model['names'][topic]} "
                     f"({model['attributes'][topic]}) &nbsp;·&nbsp; {model['keywords'][topic]}")
         st.success(f"**Recommended action** — {action_of.get(topic, 'Log to the feedback repository')}")
+
+with tab4:
+    st.subheader("Products driving the most complaints")
+    st.caption("Each row is one Amazon ProductId. Score = review volume × share negative. "
+               "Only products with 20+ reviews count, to keep thin samples from dominating.")
+
+    prod = reviews.groupby("ProductId").agg(
+        reviews=("ProductId", "size"),
+        mean_compound=("compound", "mean"),
+        pct_negative=("sentiment", lambda s: (s == "negative").mean()),
+    ).reset_index()
+    prod = prod[prod["reviews"] >= 20].copy()
+
+    dominant = reviews.groupby("ProductId")["topic"].agg(lambda s: s.mode().iloc[0])
+    prod["Dominant complaint area"] = prod["ProductId"].map(dominant).map(label_of)
+    prod["complaint_score"] = (prod["reviews"] * prod["pct_negative"]).round(2)
+    prod = prod.sort_values("complaint_score", ascending=False).head(25)
+
+    st.dataframe(
+        prod[["ProductId", "reviews", "pct_negative", "mean_compound",
+              "Dominant complaint area", "complaint_score"]],
+        width='stretch', hide_index=True,
+        column_config={
+            "ProductId": "Product ID",
+            "reviews": st.column_config.NumberColumn("Reviews", format="%d"),
+            "pct_negative": st.column_config.ProgressColumn("% negative", min_value=0, max_value=1),
+            "mean_compound": st.column_config.NumberColumn("Mean VADER", format="%+.2f"),
+            "complaint_score": st.column_config.NumberColumn("Complaint score", format="%.1f"),
+        },
+    )
+    st.download_button("Export problem products (CSV)",
+                       prod.to_csv(index=False).encode(),
+                       "problem_products.csv", "text/csv")
+
+    if len(prod):
+        st.plotly_chart(
+            px.bar(prod.head(15).sort_values("complaint_score"),
+                   x="complaint_score", y="ProductId", orientation="h",
+                   color="pct_negative", color_continuous_scale="Reds",
+                   hover_data=["reviews", "Dominant complaint area"],
+                   labels={"complaint_score": "Complaint score", "ProductId": "",
+                           "pct_negative": "% negative"},
+                   height=90 + 42 * min(15, len(prod))),
+            width='stretch',
+        )
