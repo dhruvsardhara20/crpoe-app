@@ -1,100 +1,115 @@
-# CR-POE: Customer Review Mining and Product Opportunity Engine
+# CR-POE — Customer Review Mining and Product Opportunity Engine
 
-Mines customer reviews and ranks product opportunities, with the supporting
-quotes attached to each one.
+**ICT802 Capstone Project · Group M36 · Victorian Institute of Technology**
+Sponsor: Crunch Collective · Supervisor: Swathiga Guruswamy
 
-ICT802 Capstone, Group M36. Sponsor: Crunch Collective.
-
-## Run locally
-
-```bash
-python3 -m venv .venv && source .venv/bin/activate     # Windows: .venv\Scripts\activate
-pip install -r requirements.txt
-python -c "import nltk; nltk.download('vader_lexicon')"
-
-python pipeline.py --test                              # self-check, no data needed
-python fetch_data.py                                   # download the dataset
-python pipeline.py --rows 0 --topics 12                # build the model
-streamlit run app.py                                   # dashboard
-```
-
-Windows from scratch, with no Python installed: see [SETUP_WINDOWS.md](SETUP_WINDOWS.md).
-
-## Hosting on Streamlit Community Cloud
-
-Streamlit Cloud only runs `app.py`, not the pipeline. The model and scored
-reviews in `out/` are committed so the hosted app can read them directly.
-Point Streamlit Cloud at `app.py` and it works with no extra config.
-
-To refresh the hosted copy, rebuild locally and commit `out/`:
-
-```bash
-python pipeline.py --rows 0 --topics 12 --sample 15000
-git add out && git commit -m "Refresh hosted model"
-```
-
-`--sample` keeps a stratified subset of scored reviews so the committed parquet
-fits the free tier's memory. Topic modelling and all stats still run on the
-full 65,348 reviews; only the stored evidence rows are trimmed.
+Crunch Collective is a snack and wellness brand selling direct to customers online.
+Its five-person marketing team cannot read the volume of reviews and survey
+responses it now receives, so product decisions are driven by anecdote rather than
+evidence. CR-POE reads that feedback automatically and returns a ranked list of
+product opportunities, each backed by real customer quotes.
 
 ## What it does
 
-1. **Ingest.** Load reviews from CSV.
-2. **Clean.** Drop duplicates and markup; redact emails, phones, order IDs, handles.
-3. **Sentiment.** Score each review from −1 to +1 with VADER, extended with snack-domain words.
-4. **Topics.** LDA fitted on complaint reviews, labelled by each topic's distinctive keywords.
-5. **Rank.** `opportunity = topic frequency × negativity lift`, where lift is
-   the topic's % negative over the corpus baseline.
-6. **Present.** Streamlit dashboard with three tabs:
-   - *Opportunities:* ranked chart, prioritisation matrix with recommended actions, CSV export.
-   - *Review explorer:* filter by topic and sentiment, verbatim evidence, PII redaction toggle.
-   - *Live simulator:* paste any review and run it through the fitted model.
+1. **Ingest** — load customer reviews from CSV.
+2. **Clean** — remove duplicates and markup, redact emails and phone numbers.
+3. **Sentiment** — score every review from −1 to +1 with VADER.
+4. **Topics** — group reviews into themes with LDA, labelled against seven snack
+   attributes: taste, texture, packaging, price, sweetness, health, delivery.
+5. **Rank** — score each topic by how often it comes up and how negative it is.
+6. **Present** — a Streamlit dashboard in three tabs:
+   - **Opportunities** — ranked bar chart, prioritisation matrix with recommended
+     business actions and CSV export, sentiment trend.
+   - **Review explorer** — filter by topic and sentiment, browse review cards with
+     star rating, VADER score, topic and action badges, and a PII redaction toggle.
+   - **Live simulator** — paste any review and run it through the real pipeline
+     live, for demonstrations.
+
+`opportunity = topic frequency × mean severity × 100`, so a complaint that is both
+common and strongly negative ranks highest.
 
 ## Data
 
-Amazon Fine Food Reviews, from Stanford SNAP (public, no account needed).
-`fetch_data.py` downloads the archive and converts it to the CSV layout the
-pipeline reads.
+**Amazon Fine Food Reviews** (Stanford SNAP, public, free on Kaggle) — 568,454
+reviews of food and snack products, 1999–2012. Used as an approved stand-in while
+sponsor data is unavailable; the pipeline accepts any CSV with a text column.
 
-> J. McAuley and J. Leskovec, "From amateurs to connoisseurs: modeling the evolution
-> of user expertise through online reviews," *Proc. WWW*, 2013.
+> J. McAuley and J. Leskovec, "From amateurs to connoisseurs: modeling the
+> evolution of user expertise through online reviews," *Proc. WWW*, 2013.
 
-A 600-row fixture (`data/Reviews.sample.csv`) is in the repo so the pipeline
-can be smoke-tested before downloading anything:
+A 600-row fixture (`data/Reviews.sample.csv`) ships with the repo so the pipeline
+runs before the full dataset is downloaded.
+
+## Setup
+
+On Windows from scratch (no Python installed), follow [SETUP_WINDOWS.md](SETUP_WINDOWS.md) instead.
 
 ```bash
-python pipeline.py --raw data/Reviews.sample.csv --rows 0 --topics 4
+uv venv && uv pip install -r requirements.txt
 ```
 
-Corpus funnel on the full dataset:
+<details>
+<summary>Without uv</summary>
 
-| Stage | Reviews |
+```bash
+python3 -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
+```
+</details>
+
+Then fetch the VADER lexicon, and put `Reviews.csv` from Kaggle into `data/`:
+
+```bash
+.venv/bin/python -c "import nltk; nltk.download('vader_lexicon')"
+```
+
+## Run
+
+```bash
+.venv/bin/python pipeline.py --test                                  # self-check, no data needed
+.venv/bin/python pipeline.py --raw data/Reviews.sample.csv --rows 0  # fixture run
+.venv/bin/python pipeline.py                                         # 50k sample
+.venv/bin/python pipeline.py --rows 0                                # full 568k dataset
+.venv/bin/python -m streamlit run app.py                             # dashboard
+```
+
+`pipeline.py` writes `out/reviews_scored.parquet`, `out/opportunities.parquet` and
+`out/model.joblib` (the fitted vectoriser and LDA, reused by the live simulator),
+and prints a classification report comparing VADER against the star ratings.
+
+VADER's lexicon is extended with snack-domain words (`stale`, `soggy`, `crushed`,
+`crunchy`, `overpriced`, …) because the stock lexicon has no opinion on them. On the
+sample fixture this lifts accuracy from 0.80 to 0.90 and negative recall from 0.66
+to 1.00.
+
+## Structure
+
+| Path | Purpose |
 |---|---|
-| Ingested | 568,454 |
-| After removing duplicates | 393,892 |
-| Snack reviews analysed | 65,348 |
-
-## Results
-
-Sentiment accuracy vs. star ratings (binary, 3-star excluded): **weighted F1 0.884**.
-
-Known limitations (from the evaluation output, not assumed):
-
-- Neutral class fails (F1 0.04); VADER does not handle mixed reviews.
-- Negative recall 0.42: just under half of complaints are caught.
-- Sarcasm tends to score positive.
-- Three of twelve topics stay unlabelled, and the snack keyword filter leaks a few off-domain products.
-
-## Files
-
-| File | Purpose |
-|---|---|
-| `pipeline.py` | Load, clean, redact PII, sentiment, topics, ranking. `--test` runs a self-check |
-| `app.py` | Streamlit dashboard |
-| `fetch_data.py` | Download and convert the dataset |
+| `pipeline.py` | Load, clean, redact PII, VADER sentiment, LDA topics, opportunity ranking |
+| `app.py` | Streamlit dashboard: ranked opportunities, verbatim evidence, trend |
 | `data/` | Input CSVs — only the sample fixture is committed |
-| `out/` | Model and scored reviews — **committed**, required for hosting |
+| `out/` | Generated parquet files, not committed |
+| `SETUP_WINDOWS.md` | Step-by-step Windows install for a machine with nothing on it |
+| `PLAN.md` | Sprint plan, task owners, supervisor agenda |
+| `docs/` | Assignment briefs, submissions, templates, meeting material |
 
 ## Stack
 
-Python 3.12, pandas, NLTK (VADER), scikit-learn (LDA), Streamlit, Plotly.
+Python 3, pandas, NLTK (VADER), scikit-learn (LDA), Streamlit, Plotly. All free and
+open source, matching the zero-budget constraint in the proposal.
+
+## Team
+
+| Member | ID | Role |
+|---|---|---|
+| Dhruv J. Sardhara | dh66379 | Team Leader — planning, risk, quality, supervisor liaison |
+| Deep Padsala | de65795 | Data Engineering — ingestion, cleaning, PII redaction |
+| Dhruv P. Patel | dh66262 | NLP & ML — sentiment, topic modelling, ranking |
+| Axit A. Dhameliya | ax66506 | Dashboard & QA — UI, visualisation, testing |
+
+## Status
+
+Proposal (Part A) and Project Plan (Part B) submitted. Sprint 1 in progress:
+baseline pipeline running, real dataset and accuracy evidence outstanding.
+Next milestone: Specification & Design, Session 8. See `PLAN.md`.

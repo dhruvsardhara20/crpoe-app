@@ -1,6 +1,10 @@
-# Fetch Amazon Fine Food Reviews from Stanford SNAP (no Kaggle token needed)
-# and convert to the CSV layout the pipeline expects. ~122 MB gz, ~300 MB CSV.
-#   python fetch_data.py
+"""Download the Amazon Fine Food Reviews corpus and write data/Reviews.csv.
+
+Pulls from Stanford SNAP, the primary source Kaggle repackages, so no Kaggle
+account or API token is needed. ~122 MB download, ~300 MB CSV.
+
+Usage: python fetch_data.py
+"""
 import csv
 import gzip
 import os
@@ -10,7 +14,7 @@ URL = "https://snap.stanford.edu/data/finefoods.txt.gz"
 GZ = "data/finefoods.txt.gz"
 OUT = "data/Reviews.csv"
 
-# Map SNAP's record keys to the Kaggle CSV columns the pipeline reads.
+# SNAP's key -> the Kaggle CSV column name the pipeline expects.
 FIELDS = {
     "product/productId": "ProductId",
     "review/userId": "UserId",
@@ -35,7 +39,7 @@ def download() -> None:
 
 
 def convert() -> None:
-    # SNAP format: one "key: value" line per field, blank line between records.
+    """SNAP ships one 'key: value' line per field, records separated by a blank line."""
     n = 0
     with gzip.open(GZ, "rt", encoding="latin-1") as fh, open(OUT, "w", newline="") as out:
         writer = csv.DictWriter(out, fieldnames=COLUMNS)

@@ -1,5 +1,4 @@
-# Streamlit dashboard for the CR-POE prototype.
-# Run pipeline.py first to produce the parquet files this reads.
+"""CR-POE dashboard. Run: streamlit run app.py (needs pipeline.py output first)."""
 import json
 import os
 
@@ -39,8 +38,7 @@ PRESETS = {
 
 
 @st.cache_resource
-def load(_stamp):
-    # _stamp is the parquet mtime: changing it invalidates the cache after a rerun.
+def load(_stamp):  # ponytail: mtime in the key, so a fresh pipeline run is picked up
     reviews = pd.read_parquet(OUT_REVIEWS)
     reviews["has_pii"] = reviews["clean"].str.contains(
         r"\[EMAIL\]|\[PHONE\]|\[ORDER_ID\]|\[HANDLE\]", regex=True)
@@ -74,6 +72,7 @@ if funnel:
            if funnel.get("stored_rows", 0) < funnel["snack_reviews"] else "")
     )
 
+# ── KPI row ───────────────────────────────────────────────────────────────────
 top = opps.iloc[0]
 urgent = opps[opps["tier"] == "Urgent fix"]
 k = st.columns(4)
@@ -94,6 +93,7 @@ k[3].metric("Top opportunity", top["label"].split("·")[1].strip(), help=top["ac
 tab1, tab2, tab3, tab4 = st.tabs(
     ["Opportunities", "Review explorer", "Live simulator", "Problem products"])
 
+# ── Tab 1: ranked opportunities + matrix ──────────────────────────────────────
 with tab1:
     st.plotly_chart(
         px.bar(opps.sort_values("opportunity"), x="opportunity", y="label", orientation="h",
@@ -133,6 +133,7 @@ with tab1:
                             labels={"date": "", "compound": "Mean compound"}),
                     width='stretch')
 
+# ── Tab 2: filterable review cards ────────────────────────────────────────────
 with tab2:
     f = st.columns([3, 2, 2])
     topics = f[0].multiselect("Topic", opps["label"], default=list(opps["label"]))
@@ -164,6 +165,7 @@ with tab2:
           <span class="badge act">{action_of[r['topic']]}</span>
         </div>""", unsafe_allow_html=True)
 
+# ── Tab 3: live pipeline test ─────────────────────────────────────────────────
 with tab3:
     st.subheader("Live review simulator")
     st.caption("Paste any review to run it through the same redaction, VADER scoring and "
@@ -191,7 +193,7 @@ with tab3:
         st.markdown("**Sanitised text**", unsafe_allow_html=True)
         st.markdown(f"<div class='card'>{shown}</div>", unsafe_allow_html=True)
 
-        # st.metric truncates long values, so keep these two short.
+        # Only short values stay in st.metric — it truncates without wrapping.
         out = st.columns(2)
         out[0].metric("Predicted sentiment", mood.title())
         out[1].metric("VADER compound", f"{score:+.2f}")
@@ -199,6 +201,7 @@ with tab3:
                     f"({model['attributes'][topic]}) &nbsp;·&nbsp; {model['keywords'][topic]}")
         st.success(f"**Recommended action** — {action_of.get(topic, 'Log to the feedback repository')}")
 
+# ── Tab 4: per-product complaint ranking ──────────────────────────────────────
 with tab4:
     st.subheader("Products driving the most complaints")
     st.caption("Each row is one Amazon ProductId. Score = review volume × share negative. "
